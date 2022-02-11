@@ -17,14 +17,14 @@ package com.dicoding.exam.latihan1
  *  Sesuaikan fungsi di bawah ini dengan kode untuk mengecek apakah parameter number
  *  merupakan angka genap
  */
-fun oddNumber(number: Int) = number % 2 == 0
+fun oddNumber(number: Int) = false
 
 /**
  *  TODO 2
  *  Sesuaikan fungsi di bawah ini dengan kode untuk mengecek apakah parameter number
  *  lebih dari 5
  */
-fun moreThanFive(number: Int) = number > 5
+fun moreThanFive(number: Int) = false
 
 /**
  *  TODO 3
@@ -33,7 +33,7 @@ fun moreThanFive(number: Int) = number > 5
  *
  *      param * ( param + 10 )
  */
-fun result(number: Int) = number * (number + 10)
+fun result(number: Int) = 0
 
 fun main() {
     val listNumber = 1.rangeTo(100)
