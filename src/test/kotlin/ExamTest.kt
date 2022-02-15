@@ -63,7 +63,7 @@ class ExamTest : Spek({
             it("[Latihan 2] - result function should be return expected value") {
                 val calculateResult = calculate(101, 52, null)
                 val result = result(calculateResult)
-                assertEquals(result, "Result 103")
+                assertEquals(result, "Result is 103")
             }
         }
 
