@@ -17,7 +17,7 @@ package com.dicoding.exam.latihan1
  *  Sesuaikan fungsi di bawah ini dengan kode untuk mengecek apakah parameter number
  *  merupakan angka genap
  */
-fun oddNumber(number: Int) = false
+fun isEvenNumber(number: Int) = false
 
 /**
  *  TODO 2
@@ -38,7 +38,7 @@ fun result(number: Int) = 0
 fun main() {
     val listNumber = 1.rangeTo(100)
     for (number in listNumber) {
-        if (oddNumber(number)) continue
+        if (isEvenNumber(number)) continue
 
         if (moreThanFive(number)) break
 

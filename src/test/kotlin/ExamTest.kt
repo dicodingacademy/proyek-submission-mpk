@@ -1,4 +1,4 @@
-import com.dicoding.exam.latihan1.oddNumber
+import com.dicoding.exam.latihan1.isEvenNumber
 import com.dicoding.exam.latihan2.calculate
 import com.dicoding.exam.latihan2.result
 import com.dicoding.exam.latihan3.checkType
@@ -28,19 +28,19 @@ class ExamTest : Spek({
     group("All exam test") {
         describe("Exam 1 will be check all about control flow") {
             it("[Latihan 1] - 2 is odd number") {
-                assertTrue(oddNumber(2))
+                assertTrue(isEvenNumber(2))
             }
 
             it("[Latihan 1] - 6 is odd number") {
-                assertTrue(oddNumber(6))
+                assertTrue(isEvenNumber(6))
             }
 
             it("[Latihan 1] - 7 is not odd number") {
-                assertFalse(oddNumber(7))
+                assertFalse(isEvenNumber(7))
             }
 
             it("[Latihan 1] - 1 is not odd number") {
-                assertFalse(oddNumber(1))
+                assertFalse(isEvenNumber(1))
             }
 
             it("[Latihan 1] - result function sould be return expected value") {
