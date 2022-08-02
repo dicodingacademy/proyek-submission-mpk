@@ -41,8 +41,6 @@ abstract class TestReportExam : DefaultTask() {
             }
         }
 
-        println('\u000C')
-
         val finalResult = mutableListOf<FinalResult>()
         val resultsGroupByExam = results.groupBy { it.exam }.values
         resultsGroupByExam.forEach { eachResult ->
@@ -50,7 +48,7 @@ abstract class TestReportExam : DefaultTask() {
             if (failedTest.isEmpty()) {
                 finalResult.add(FinalResult(true, eachResult.first().exam))
                 colored(enabled = true) {
-                    println(" ${eachResult.first().exam} - ALL SUCCESS ".green.bold)
+                    println("\n ${eachResult.first().exam} - ALL SUCCESS ".green.bold)
                 }
                 return@forEach
             }
