@@ -5,12 +5,12 @@ import org.w3c.dom.Element
 import java.io.File
 import javax.xml.parsers.DocumentBuilderFactory
 
-data class Result (val isPassed: Boolean, val testcaseName: String, val errorMessage: String?)
+data class Result (val isPassed: Boolean = false, val exam: String? = null, val testcaseName: String? = null, val errorMessage: String? = null)
+data class FinalResult(val allExamPassed: Boolean, val exam: String?, val errors: List<String> = listOf())
 
 abstract class TestReportExam : DefaultTask() {
     @TaskAction
     fun run() {
-        println('\u000C')
 
         val file = "${project.buildDir}/test-results/test/TEST-ExamTest.xml"
         if (!File(file).isFile) {
@@ -25,26 +25,55 @@ abstract class TestReportExam : DefaultTask() {
 
         val results = mutableListOf<Result>()
         val testcaseNodes = doc.getElementsByTagName("testcase")
+
         repeat(testcaseNodes.length) {
             val testsuite = testcaseNodes.item(it) as Element
             val failure = testsuite.getElementsByTagName("failure").item(0) as? Element
+            val testcaseName = testsuite.getAttribute("name")
+            val exam = testcaseName.split("--").first().trim()
+            val readableTestcaseName = testcaseName.replace("$exam --", "").trim()
+
             if (failure !== null) {
-                val testcaseName = testsuite.getAttribute("name")
                 val errorMessage = failure.getAttribute("message").split("AssertionFailedError: ").last()
-                colored(enabled = true) {
-                    println( " ERROR ".red.bold + " " + errorMessage.bold.reverse + " " + testcaseName + " " + testsuite.getAttribute("name"))
-                }
-                results.add(Result(false, testcaseName, errorMessage))
+                results.add(Result(false, exam, readableTestcaseName, errorMessage))
             } else {
-                colored(enabled = true) {
-                    println(" SUCCESS ".green.bold + testsuite.getAttribute("name"))
-                }
-                results.add(Result(true, testsuite.getAttribute("name"), null))
+                results.add(Result(true, exam, readableTestcaseName))
             }
         }
 
-        val result = GsonBuilder().setPrettyPrinting().create()
-        File(project.projectDir.toString() +  "/result.json").writeText(result.toJson(results))
+        println('\u000C')
 
+        val finalResult = mutableListOf<FinalResult>()
+        val resultsGroupByExam = results.groupBy { it.exam }.values
+        resultsGroupByExam.forEach { eachResult ->
+            val failedTest = eachResult.filter { !it.isPassed }
+            if (failedTest.isEmpty()) {
+                finalResult.add(FinalResult(true, eachResult.first().exam))
+                colored(enabled = true) {
+                    println(" ${eachResult.first().exam} - ALL SUCCESS ".green.bold)
+                }
+                return@forEach
+            }
+
+            val errors = mutableListOf<String>()
+            val mutableFailedTest = failedTest.toMutableList()
+            mutableFailedTest.add(0, Result(exam = failedTest.first().exam))
+            mutableFailedTest.forEachIndexed { index, result ->
+                if (index == 0) {
+                    colored(enabled = true) {
+                        println("\n ${result.exam} - ERROR  ".red.bold )
+                    }
+                } else {
+                    errors.add(result.errorMessage ?: "")
+                    colored(enabled = true) {
+                        println(" > ${result.errorMessage} " )
+                    }
+                }
+            }
+            finalResult.add(FinalResult(false, eachResult.first().exam, errors))
+        }
+
+        val result = GsonBuilder().setPrettyPrinting().create()
+        File(project.projectDir.toString() +  "/result.json").writeText(result.toJson(finalResult))
     }
 } 
