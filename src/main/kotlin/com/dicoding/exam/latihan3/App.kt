@@ -39,7 +39,7 @@ fun main() {
         '[10, 9, 8 , 6]' is List? ${checkType(listOf(10, 9, 8, 6))}
         'Dicoding Indonesia' is String? ${checkType("Dicoding Indonesia")}
         'True' is Boolean? ${checkType(true)}
-        '10.01' is List? ${checkType(10.01)}
+        '10.01' is Double? ${checkType(10.01)}
     """.trimIndent()
     )
 }
