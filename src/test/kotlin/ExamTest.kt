@@ -43,6 +43,18 @@ class ExamTest : Spek({
                 isEvenNumber(1).returnFalse(errMessage = "Jika argumennya adalah 1, fungsi isEvenNumber() seharusnya mengembalikkan nilai false")
             }
 
+            for (number in 1..99 step 2) {
+                it("Latihan 1") {
+                    isEvenNumber(number).returnFalse(errMessage = "Jika argumennya adalah $number, fungsi isEvenNumber() seharusnya mengembalikkan nilai false")
+                }
+            }
+
+            for (number in 0..100 step 2) {
+                it("Latihan 1") {
+                    isEvenNumber(number).returnTrue(errMessage = "Jika argumennya adalah $number, fungsi isEvenNumber() seharusnya mengembalikkan nilai true")
+                }
+            }
+
             it("Latihan 1") {
                 moreThanFive(1).returnFalse(errMessage = "Jika argumennya adalah 1, fungsi moreThanFive() seharusnya mengembalikkan nilai false")
             }
