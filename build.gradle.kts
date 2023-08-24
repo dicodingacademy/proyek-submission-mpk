@@ -1,6 +1,9 @@
+import org.jlleitschuh.gradle.ktlint.reporter.ReporterType
+
 plugins {
     kotlin("jvm") version "1.9.0"
     application
+    id("org.jlleitschuh.gradle.ktlint") version "11.5.1"
 }
 
 group = "org.example"
@@ -31,3 +34,20 @@ tasks.getByName<Test>("test") {
 }
 
 tasks.register<TestReportExam>("testReportExam")
+
+
+ktlint {
+    ignoreFailures.set(true)
+    enableExperimentalRules.set(false)
+    outputToConsole.set(true)
+    outputColorName.set("RED")
+    reporters {
+        reporter(ReporterType.JSON)
+    }
+}
+
+tasks.withType<org.jlleitschuh.gradle.ktlint.tasks.GenerateReportsTask> {
+    reportsOutputDirectory.set(
+        project.layout.buildDirectory.dir("ktlint-result")
+    )
+}
