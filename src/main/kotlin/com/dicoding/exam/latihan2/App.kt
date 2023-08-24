@@ -43,8 +43,10 @@ fun main() {
     val resultA = calculate(valueA, valueB, valueC)
     val resultB = calculate(valueA, valueB, null)
 
-    println("""
+    println(
+        """
         ${result(resultA)}
         ${result(resultB)}
-    """.trimIndent())
+        """.trimIndent()
+    )
 }

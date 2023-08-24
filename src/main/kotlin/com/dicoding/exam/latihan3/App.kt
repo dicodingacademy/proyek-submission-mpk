@@ -40,6 +40,6 @@ fun main() {
         'Dicoding Indonesia' is String? ${checkType("Dicoding Indonesia")}
         'True' is Boolean? ${checkType(true)}
         '10.01' is Double? ${checkType(10.01)}
-    """.trimIndent()
+        """.trimIndent()
     )
 }
