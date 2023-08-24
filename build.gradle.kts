@@ -35,7 +35,6 @@ tasks.getByName<Test>("test") {
 
 tasks.register<TestReportExam>("testReportExam")
 
-
 ktlint {
     ignoreFailures.set(true)
     enableExperimentalRules.set(false)
