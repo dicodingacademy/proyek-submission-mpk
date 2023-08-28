@@ -8,10 +8,16 @@ import com.dicoding.exam.latihan5.multiple
 import com.dicoding.exam.latihan5.sum
 import com.dicoding.exam.latihan_opsional1.RGB
 import com.dicoding.exam.latihan_opsional1.hexColorToRGB
+import com.dicoding.exam.latihan_opsional2.concatString
 import kotlinx.coroutines.async
 import kotlinx.coroutines.runBlocking
+import org.junit.jupiter.api.Assertions.fail
 import org.spekframework.spek2.Spek
 import org.spekframework.spek2.style.specification.describe
+import java.io.File
+import java.io.IOException
+import java.nio.file.Files
+import kotlin.random.Random
 import kotlin.system.measureTimeMillis
 
 /****************************************************************************************************
@@ -244,6 +250,7 @@ class ExamTest : Spek({
                     errMessage = "Jika argumennya adalah #CCAABB, fungsi hexColorToRGB() seharusnya mengembalikkan nilai RGB(204, 170, 187)"
                 )
             }
+
             it("Latihan Opsional 1") {
                 val result = hexColorToRGB("#FFFFFF")
                 assertEqualsWith(
@@ -252,6 +259,7 @@ class ExamTest : Spek({
                     errMessage = "Jika argumennya adalah #FFFFFF, fungsi hexColorToRGB() seharusnya mengembalikkan nilai RGB(255, 255, 255)"
                 )
             }
+
             it("Latihan Opsional 1") {
                 val result = hexColorToRGB("#A1B2C3")
                 assertEqualsWith(
@@ -260,6 +268,58 @@ class ExamTest : Spek({
                     errMessage = "Jika argumennya adalah #A1B2C3, fungsi hexColorToRGB() seharusnya mengembalikkan nilai RGB(161, 178, 195)"
                 )
             }
+        }
+
+        describe("Pengecekan Latihan Opsional 2") {
+            it("Latihan Opsional 2") {
+                try {
+                    Files.lines(File("src/main/kotlin/com/dicoding/exam/latihan_opsional2/App.kt").toPath())
+                        .forEach { line ->
+                            assertEqualsWith(
+                                actual = "fun" in line,
+                                expected = false,
+                                errMessage = "Method concatString() tidak boleh menggunakan keyword `fun`"
+                            )
+                            assertEqualsWith(
+                                actual = "{" in line,
+                                expected = false,
+                                errMessage = "Method concatString() tidak boleh mengandung karakter `{`"
+                            )
+                            assertEqualsWith(
+                                actual = "}" in line,
+                                expected = false,
+                                errMessage = "Method concatString() tidak boleh menggunakan keyword `}`"
+                            )
+                        }
+                } catch (e: IOException) {
+                    fail("Failed to read the source file.")
+                }
+            }
+
+            it("Latihan Opsional 2") {
+                val result = concatString("Hello", "Dicoding")
+                assertEqualsWith(
+                    actual = result,
+                    expected = "HelloDicoding",
+                    errMessage = "Jika argumennya adalah 'Hello' dan 'Dicoding', fungsi concatString() seharusnya mengembalikkan nilai HelloDicoding"
+                )
+            }
+
+            it("Latihan Opsional 2") {
+                val r = Random(System.currentTimeMillis())
+                repeat(3) {
+                    val string1 = r.nextInt().toString(2)
+                    val string2 = r.nextInt().toString(2)
+                    assertEqualsWith(
+                        actual = concatString(string1, string2),
+                        expected = string1 + string2,
+                        errMessage = "Jika argumennya adalah '$string1' dan '$string2', fungsi concatString() seharusnya mengembalikkan nilai ${
+                            string1.plus(string2)
+                        }"
+                    )
+                }
+            }
+
         }
     }
 })
