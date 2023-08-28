@@ -9,6 +9,7 @@ import com.dicoding.exam.latihan5.sum
 import com.dicoding.exam.latihan_opsional1.RGB
 import com.dicoding.exam.latihan_opsional1.hexColorToRGB
 import com.dicoding.exam.latihan_opsional2.concatString
+import com.dicoding.exam.latihan_opsional3.manipulateString
 import kotlinx.coroutines.async
 import kotlinx.coroutines.runBlocking
 import org.junit.jupiter.api.Assertions.fail
@@ -319,7 +320,36 @@ class ExamTest : Spek({
                     )
                 }
             }
+        }
 
+        describe("Pengecekan Latihan Opsional 3") {
+            it("Latihan Opsional 3") {
+                repeat(2) {
+                    val randInt = (1..100).random()
+                    val string = "dicoding"
+                    assertEqualsWith(
+                        actual = manipulateString(string, randInt),
+                        expected = string + randInt,
+                        errMessage = "Jika argumennya adalah '$string' dan '$randInt', fungsi concatString() seharusnya mengembalikkan nilai ${
+                            string.plus(randInt)
+                        }"
+                    )
+                }
+            }
+
+            it("Latihan Opsional 3") {
+                repeat(2) {
+                    val randInt = (1..100).random()
+                    val string = "dicoding0101"
+                    assertEqualsWith(
+                        actual = manipulateString(string, randInt),
+                        expected = "dicoding" + (randInt.times(101)),
+                        errMessage = "Jika argumennya adalah '$string' dan '$randInt', fungsi concatString() seharusnya mengembalikkan nilai ${
+                            "dicoding".plus(randInt.times(101))
+                        }"
+                    )
+                }
+            }
         }
     }
 })
