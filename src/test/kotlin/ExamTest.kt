@@ -11,6 +11,7 @@ import com.dicoding.exam.latihan_opsional1.hexColorToRGB
 import com.dicoding.exam.latihan_opsional2.concatString
 import com.dicoding.exam.latihan_opsional3.manipulateString
 import com.dicoding.exam.latihan_opsional4.getMiddleCharacters
+import com.dicoding.exam.latihan_opsional5.minAndMax
 import kotlinx.coroutines.async
 import kotlinx.coroutines.runBlocking
 import org.junit.jupiter.api.Assertions.fail
@@ -378,6 +379,35 @@ class ExamTest : Spek({
                     actual = result,
                     expected = "A",
                     errMessage = "Jika argumennya adalah 'A', fungsi concatString() seharusnya mengembalikkan nilai 'A'"
+                )
+            }
+        }
+
+        describe("Pengecekan Latihan Opsional 5") {
+            it("Latihan Opsional 5") {
+                val result = minAndMax(985684579)
+                assertEqualsWith(
+                    actual = result,
+                    expected = 13,
+                    errMessage = "Jika argumennya adalah '985684579', fungsi concatString() seharusnya mengembalikkan nilai '13'"
+                )
+            }
+
+            it("Latihan Opsional 5") {
+                val result = minAndMax(1111111)
+                assertEqualsWith(
+                    actual = result,
+                    expected = 2,
+                    errMessage = "Jika argumennya adalah '1111111', fungsi concatString() seharusnya mengembalikkan nilai '2'"
+                )
+            }
+
+            it("Latihan Opsional 5") {
+                val result = minAndMax(6423654)
+                assertEqualsWith(
+                    actual = result,
+                    expected = 8,
+                    errMessage = "Jika argumennya adalah '6423654', fungsi concatString() seharusnya mengembalikkan nilai '8'"
                 )
             }
         }
