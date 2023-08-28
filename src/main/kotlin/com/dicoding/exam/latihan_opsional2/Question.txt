@@ -1,0 +1,8 @@
+TODO
+Ubahlah method concatString() pada latihan_opsional2/App.kt menjadi method yang dapat menggabungkan dua buah string.
+Namun, dengan catatan sebagai berikut:
+ - Tidak boleh menggunakan keyword `fun`
+ - Tidak boleh mengandung karakter `{` dan `}`
+
+Contoh:
+Input : string1=Hello, string2=Dicoding -> Output = HelloDicoding
