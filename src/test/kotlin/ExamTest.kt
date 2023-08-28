@@ -10,6 +10,7 @@ import com.dicoding.exam.latihan_opsional1.RGB
 import com.dicoding.exam.latihan_opsional1.hexColorToRGB
 import com.dicoding.exam.latihan_opsional2.concatString
 import com.dicoding.exam.latihan_opsional3.manipulateString
+import com.dicoding.exam.latihan_opsional4.getMiddleCharacters
 import kotlinx.coroutines.async
 import kotlinx.coroutines.runBlocking
 import org.junit.jupiter.api.Assertions.fail
@@ -349,6 +350,35 @@ class ExamTest : Spek({
                         }"
                     )
                 }
+            }
+        }
+
+        describe("Pengecekan Latihan Opsional 4") {
+            it("Latihan Opsional 4") {
+                val result = getMiddleCharacters("Dicoding")
+                assertEqualsWith(
+                    actual = result,
+                    expected = "od",
+                    errMessage = "Jika argumennya adalah 'Dicoding', fungsi concatString() seharusnya mengembalikkan nilai 'od'"
+                )
+            }
+
+            it("Latihan Opsional 4") {
+                val result = getMiddleCharacters("DicodingIndonesia")
+                assertEqualsWith(
+                    actual = result,
+                    expected = "I",
+                    errMessage = "Jika argumennya adalah 'DicodingIndonesia', fungsi concatString() seharusnya mengembalikkan nilai 'I'"
+                )
+            }
+
+            it("Latihan Opsional 4") {
+                val result = getMiddleCharacters("A")
+                assertEqualsWith(
+                    actual = result,
+                    expected = "A",
+                    errMessage = "Jika argumennya adalah 'A', fungsi concatString() seharusnya mengembalikkan nilai 'A'"
+                )
             }
         }
     }
