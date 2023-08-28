@@ -6,6 +6,8 @@ import com.dicoding.exam.latihan3.checkType
 import com.dicoding.exam.latihan4.vehicle
 import com.dicoding.exam.latihan5.multiple
 import com.dicoding.exam.latihan5.sum
+import com.dicoding.exam.latihan_opsional1.RGB
+import com.dicoding.exam.latihan_opsional1.hexColorToRGB
 import kotlinx.coroutines.async
 import kotlinx.coroutines.runBlocking
 import org.spekframework.spek2.Spek
@@ -230,6 +232,33 @@ class ExamTest : Spek({
                     val result = async { multiple(5, 5) }
                     (result.await() == 25).returnTrue("Jika argumen untuk parameter a adalah 5 dan b adalah 5, fungsi multiple() seharusnya mengembalikkan nilai 25")
                 }
+            }
+        }
+
+        describe("Pengecekan Latihan Opsional 1") {
+            it("Latihan Opsional 1") {
+                val result = hexColorToRGB("#CCAABB")
+                assertEqualsWith(
+                    actual = result,
+                    expected = RGB(204, 170, 187),
+                    errMessage = "Jika argumennya adalah #CCAABB, fungsi hexColorToRGB() seharusnya mengembalikkan nilai RGB(204, 170, 187)"
+                )
+            }
+            it("Latihan Opsional 1") {
+                val result = hexColorToRGB("#FFFFFF")
+                assertEqualsWith(
+                    actual = result,
+                    expected = RGB(255, 255, 255),
+                    errMessage = "Jika argumennya adalah #FFFFFF, fungsi hexColorToRGB() seharusnya mengembalikkan nilai RGB(255, 255, 255)"
+                )
+            }
+            it("Latihan Opsional 1") {
+                val result = hexColorToRGB("#A1B2C3")
+                assertEqualsWith(
+                    actual = result,
+                    expected = RGB(161, 178, 195),
+                    errMessage = "Jika argumennya adalah #A1B2C3, fungsi hexColorToRGB() seharusnya mengembalikkan nilai RGB(161, 178, 195)"
+                )
             }
         }
     }
