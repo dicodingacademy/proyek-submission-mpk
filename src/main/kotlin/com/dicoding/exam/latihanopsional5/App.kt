@@ -10,27 +10,25 @@
  *                                                                                                  *
  ***************************************************************************************************/
 
-package com.dicoding.exam.latihan_opsional3
+package com.dicoding.exam.latihanopsional5
 
 /**
  *  TODO
  *  Lengkapi fungsi di bawah dengan ketentuan sebagai berikut:
- *  - Fungsi menerima input string dan integer dengan rentang 1-100.
- *  - Fungsi harus mengembalikan string dengan ketentuan:
- *      - Jika string mengandung angka, maka kalikan angka pada string dengan angka yang diinput. Kemudian gabungkan dengan string yang diinput.
- *      - Jika string tidak mengandung angka, maka gabungkan angka yang dinput ke string yang diinput.
+ *  - Fungsi menerima input Number dengan panjang digit 2-10.
+ *  - Fungsi harus mengembalikan Integer yang merupakan hasil penjumlahan dari angka terkecil dan angka terbesar dari nilai yang diinput
  *
  *  Contoh:
- *  Input = str=dicoding123, int=10 -> Output = dicoding1230
- *  Input = str=Dicoding000010, int=100 -> Output = Dicoding1000
- *  Input = str=dicoding, int=100  -> Output = dicoding100
+ *  Input = number=987234 -> Output = 11 (2+9)
+ *  Input = number=8812334 -> Output = 9 (1+8)
+ *  Input = number=10 -> Output = 1 (0+1)
  */
 
-fun manipulateString(str: String, int: Int): String {
-    return ""
+fun minAndMax(number: Number): Int {
+    return 0
 }
 
 fun main() {
-    println(manipulateString("Dicoding000010", 100) == "Dicoding1000")
-    println(manipulateString("dicoding", 99) == "dicoding99")
+    println(minAndMax(987234) == 11)
+    println(minAndMax(8812334) == 9)
 }

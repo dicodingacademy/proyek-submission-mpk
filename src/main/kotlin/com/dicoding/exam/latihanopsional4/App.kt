@@ -10,26 +10,27 @@
  *                                                                                                  *
  ***************************************************************************************************/
 
-package com.dicoding.exam.latihan_opsional1
+package com.dicoding.exam.latihanopsional4
 
 /**
  *  TODO
  *  Lengkapi fungsi di bawah dengan ketentuan sebagai berikut:
- *  - Fungsi menerima input string berupa kode warna dalam format 6 digit hexadesimal. Contoh: #FFFFFF atau #OOOOOO.
- *  - Fungsi mengembalikan class RBG dengan parameter r untuk merah, g untuk hijau dan b untuk biru.
- *    Dimana masing-masing paramter tersebut bertipe Interger dengan rentang nilai 0-255.
+ *  - Fungsi menerima input string dengan panjang karakter 1-100.
+ *  - Fungsi harus mengembalikan karakter yang ditengah dari string yang diinput.
+ *      - Jika panjang string bernilai genap, maka yang dikembalikan adalah 2 karakter.
+ *      - Jika panjang string bernilai ganjil, maka yang dikembalikan adalah 1 karakter.
  *
  *  Contoh:
- *  Input = #FF2231 -> Output = RGB(r=255, g=34, b=49)
- *  Input = #123456 -> Output = RGB(r=18, g=52, b=86)
+ *  Input = string=dicoding -> Output = od
+ *  Input = string=dicodingindonesia  -> Output = i
+ *  Input = string=A  -> Output = A
  */
 
-data class RGB(val r: Int, val g: Int, val b: Int)
-
-fun hexColorToRGB(color: String): RGB {
-    return RGB(0, 0, 0)
+fun getMiddleCharacters(string: String): String {
+    return ""
 }
 
 fun main() {
-    println("${hexColorToRGB("#123456") == RGB(18, 52, 86)}")
+    println(getMiddleCharacters("dicodingindonesia") == "i")
+    println(getMiddleCharacters("dicoding") == "od")
 }

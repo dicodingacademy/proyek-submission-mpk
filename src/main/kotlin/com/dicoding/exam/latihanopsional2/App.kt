@@ -8,7 +8,7 @@
  *                                                                                                  *
  ***************************************************************************************************/
 
-package com.dicoding.exam.latihan_opsional2
+package com.dicoding.exam.latihanopsional2
 
 /**
  *  TODO

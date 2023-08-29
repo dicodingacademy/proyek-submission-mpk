@@ -6,12 +6,12 @@ import com.dicoding.exam.latihan3.checkType
 import com.dicoding.exam.latihan4.vehicle
 import com.dicoding.exam.latihan5.multiple
 import com.dicoding.exam.latihan5.sum
-import com.dicoding.exam.latihan_opsional1.RGB
-import com.dicoding.exam.latihan_opsional1.hexColorToRGB
-import com.dicoding.exam.latihan_opsional2.concatString
-import com.dicoding.exam.latihan_opsional3.manipulateString
-import com.dicoding.exam.latihan_opsional4.getMiddleCharacters
-import com.dicoding.exam.latihan_opsional5.minAndMax
+import com.dicoding.exam.latihanopsional1.RGB
+import com.dicoding.exam.latihanopsional1.hexColorToRGB
+import com.dicoding.exam.latihanopsional2.concatString
+import com.dicoding.exam.latihanopsional3.manipulateString
+import com.dicoding.exam.latihanopsional4.getMiddleCharacters
+import com.dicoding.exam.latihanopsional5.minAndMax
 import kotlinx.coroutines.async
 import kotlinx.coroutines.runBlocking
 import org.junit.jupiter.api.Assertions.fail
@@ -276,7 +276,7 @@ class ExamTest : Spek({
         describe("Pengecekan Latihan Opsional 2") {
             it("Latihan Opsional 2") {
                 try {
-                    Files.lines(File("src/main/kotlin/com/dicoding/exam/latihan_opsional2/App.kt").toPath())
+                    Files.lines(File("src/main/kotlin/com/dicoding/exam/latihanopsional2/App.kt").toPath())
                         .forEach { line ->
                             assertEqualsWith(
                                 actual = "fun" in line,
