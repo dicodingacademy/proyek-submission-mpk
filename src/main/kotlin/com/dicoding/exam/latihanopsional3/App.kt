@@ -24,6 +24,8 @@ package com.dicoding.exam.latihanopsional3
  *  Input = str=dicoding123, int=10 -> Output = dicoding1230
  *  Input = str=Dicoding000010, int=100 -> Output = Dicoding1000
  *  Input = str=dicoding, int=100  -> Output = dicoding100
+ *
+ *  Modul terkait: Kotlin Fundamental & Collections
  */
 
 fun manipulateString(str: String, int: Int): String {

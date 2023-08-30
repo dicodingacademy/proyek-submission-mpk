@@ -24,6 +24,9 @@ package com.dicoding.exam.latihanopsional4
  *  Input = string=dicoding -> Output = od
  *  Input = string=dicodingindonesia  -> Output = i
  *  Input = string=A  -> Output = A
+ *
+ *  Hint:  Kotlin Fundamental & Collections
+ *
  */
 
 fun getMiddleCharacters(string: String): String {

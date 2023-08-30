@@ -22,6 +22,9 @@ package com.dicoding.exam.latihanopsional5
  *  Input = number=987234 -> Output = 11 (2+9)
  *  Input = number=8812334 -> Output = 9 (1+8)
  *  Input = number=10 -> Output = 1 (0+1)
+ *
+ *  Modul terkait: Kotlin Fundamental & Collections
+ *
  */
 
 fun minAndMax(number: Number): Int {

@@ -23,8 +23,7 @@ package com.dicoding.exam.latihanopsional1
  *  Input = sumOfBigThree(22, 20, 21, 25, 24) -> Output = 71 | Penjelasan: 25 + 24 + 22 = 71
  *  Input = sumOfBigThree(100, 1000, 30, 1) -> Output = 1130 | Penjelasan: 1000 + 100 + 30 = 1130
  *
- *  Hint:
- *  Buka kembali modul Functional Programming dan Collections.
+ *  Modul terkait: Functional Programming dan Collections.
  */
 
 

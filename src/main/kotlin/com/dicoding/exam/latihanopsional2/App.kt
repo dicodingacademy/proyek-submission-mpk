@@ -23,8 +23,7 @@ import java.nio.file.Files
  *  Contoh:
  *  Input : string1=Hello, string2=Dicoding -> Output = HelloDicoding
  *
- *  Hint:
- *  Buka kembali modul Kotlin Functional Programming
+ *  Modul terkait: Kotlin Fundamental & Functional Programming
  */
 
 fun concatString(string1: String, string2: String): String {
