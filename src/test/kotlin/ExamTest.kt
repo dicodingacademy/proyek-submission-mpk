@@ -6,8 +6,7 @@ import com.dicoding.exam.latihan3.checkType
 import com.dicoding.exam.latihan4.vehicle
 import com.dicoding.exam.latihan5.multiple
 import com.dicoding.exam.latihan5.sum
-import com.dicoding.exam.latihanopsional1.RGB
-import com.dicoding.exam.latihanopsional1.hexColorToRGB
+import com.dicoding.exam.latihanopsional1.sumOfBigThree
 import com.dicoding.exam.latihanopsional2.concatString
 import com.dicoding.exam.latihanopsional3.manipulateString
 import com.dicoding.exam.latihanopsional4.getMiddleCharacters
@@ -246,31 +245,32 @@ class ExamTest : Spek({
 
         describe("Pengecekan Latihan Opsional 1") {
             it("Latihan Opsional 1") {
-                val result = hexColorToRGB("#CCAABB")
+                val result = sumOfBigThree(2,4,9,2,6,3,4,9)
                 assertEqualsWith(
                     actual = result,
-                    expected = RGB(204, 170, 187),
-                    errMessage = "Jika argumennya adalah #CCAABB, fungsi hexColorToRGB() seharusnya mengembalikkan nilai RGB(204, 170, 187)"
+                    expected = 24,
+                    errMessage = "Jika argumennya adalah 2,4,9,2,6,3,4,9 fungsi sumOfBigThree() seharusnya mengembalikkan nilai 24"
                 )
             }
 
             it("Latihan Opsional 1") {
-                val result = hexColorToRGB("#FFFFFF")
+                val result = sumOfBigThree(123, 321, 234,567,908,12)
                 assertEqualsWith(
                     actual = result,
-                    expected = RGB(255, 255, 255),
-                    errMessage = "Jika argumennya adalah #FFFFFF, fungsi hexColorToRGB() seharusnya mengembalikkan nilai RGB(255, 255, 255)"
+                    expected = 1796,
+                    errMessage = "Jika argumennya adalah 123, 321, 234,567,908,12 fungsi sumOfBigThree() seharusnya mengembalikkan nilai 1796"
                 )
             }
 
             it("Latihan Opsional 1") {
-                val result = hexColorToRGB("#A1B2C3")
+                val result = sumOfBigThree(4,2,1,23,4,54,7,88,8)
                 assertEqualsWith(
                     actual = result,
-                    expected = RGB(161, 178, 195),
-                    errMessage = "Jika argumennya adalah #A1B2C3, fungsi hexColorToRGB() seharusnya mengembalikkan nilai RGB(161, 178, 195)"
+                    expected = 165,
+                    errMessage = "Jika argumennya adalah 4,2,1,23,4,54,7,88,8 fungsi sumOfBigThree() seharusnya mengembalikkan nilai 165"
                 )
             }
+
         }
 
         describe("Pengecekan Latihan Opsional 2") {

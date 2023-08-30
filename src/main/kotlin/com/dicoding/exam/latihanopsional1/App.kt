@@ -15,21 +15,25 @@ package com.dicoding.exam.latihanopsional1
 /**
  *  TODO
  *  Lengkapi fungsi di bawah dengan ketentuan sebagai berikut:
- *  - Fungsi menerima input string berupa kode warna dalam format 6 digit hexadesimal. Contoh: #FFFFFF atau #OOOOOO.
- *  - Fungsi mengembalikan class RBG dengan parameter r untuk merah, g untuk hijau dan b untuk biru.
- *    Dimana masing-masing paramter tersebut bertipe Interger dengan rentang nilai 0-255.
+ *  - Fungsi menerima 1 sampai 10 input bertipe integer tetapi hanya boleh ditampung dalam satu paramter, yaitu `numbers`.
+ *  - Fungsi mengembalikan jumlahh dari maksimal 3 angka yang paling besar dalam bentuk string.
  *
  *  Contoh:
- *  Input = #FF2231 -> Output = RGB(r=255, g=34, b=49)
- *  Input = #123456 -> Output = RGB(r=18, g=52, b=86)
+ *  Input = sumOfBigThree(1,2,3,4,5,6,7,8,9,10) -> Output = 27 | Penjelasan: 10 + 9 + 8 = 27
+ *  Input = sumOfBigThree(22, 20, 21, 25, 24) -> Output = 71 | Penjelasan: 25 + 24 + 22 = 71
+ *  Input = sumOfBigThree(100, 1000, 30, 1) -> Output = 1130 | Penjelasan: 1000 + 100 + 30 = 1130
+ *
+ *  Hint:
+ *  Buka kembali modul Functional Programming dan Collections.
  */
 
-data class RGB(val r: Int, val g: Int, val b: Int)
 
-fun hexColorToRGB(color: String): RGB {
-    return RGB(0, 0, 0)
+fun sumOfBigThree(vararg numbers: Int): Int {
+    return 0
 }
 
 fun main() {
-    println("${hexColorToRGB("#123456") == RGB(18, 52, 86)}")
+    println(sumOfBigThree(100, 1000, 30, 1) == 1130)
+    println(sumOfBigThree(22, 20, 21, 25, 24) == 71)
+    println(sumOfBigThree(1, 2, 3, 4, 5, 6, 7, 8, 9, 104) == 27)
 }
