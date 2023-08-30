@@ -276,7 +276,8 @@ class ExamTest : Spek({
         describe("Pengecekan Latihan Opsional 2") {
             it("Latihan Opsional 2") {
                 try {
-                    Files.lines(File("src/main/kotlin/com/dicoding/exam/latihanopsional2/App.kt").toPath())
+                    Files.readAllLines(File("src/main/kotlin/com/dicoding/exam/latihanopsional2/App.kt").toPath())
+                        .filterIndexed { index, _ ->  index > 27}
                         .forEach { line ->
                             assertEqualsWith(
                                 actual = "fun" in line,

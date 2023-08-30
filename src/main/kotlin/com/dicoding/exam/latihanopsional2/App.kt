@@ -10,9 +10,21 @@
 
 package com.dicoding.exam.latihanopsional2
 
+import java.io.File
+import java.nio.file.Files
+
 /**
  *  TODO
- *  Kerjakan latihan ini berdasarkan soal pada latihan_opsional2/Question.txt
+ *  Ubahlah fungsi concatString() menjadi method yang dapat menggabungkan dua buah string.
+ *  Namun, dengan syarat sebagai berikut:
+ *   - Tidak boleh menggunakan keyword `fun`
+ *   - Tidak boleh mengandung karakter `{` dan `}`
+ *
+ *  Contoh:
+ *  Input : string1=Hello, string2=Dicoding -> Output = HelloDicoding
+ *
+ *  Hint:
+ *  Buka kembali modul Kotlin Functional Programming
  */
 
 fun concatString(string1: String, string2: String): String {
