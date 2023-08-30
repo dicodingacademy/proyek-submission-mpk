@@ -245,39 +245,53 @@ class ExamTest : Spek({
 
         describe("Pengecekan Latihan Opsional 1") {
             it("Latihan Opsional 1") {
-                val result = sumOfBigThree(2,4,9,2,6,3,4,9)
+                val result = sumOfBigThree(2, 4, 9, 2, 6, 3, 4, 9)
                 assertEqualsWith(
                     actual = result,
                     expected = 24,
-                    errMessage = "Jika argumennya adalah 2,4,9,2,6,3,4,9 fungsi sumOfBigThree() seharusnya mengembalikkan nilai 24"
+                    errMessage = "Jika argumennya adalah 2,4,9,2,6,3,4,9, fungsi sumOfBigThree() seharusnya mengembalikkan nilai 24"
                 )
             }
 
             it("Latihan Opsional 1") {
-                val result = sumOfBigThree(123, 321, 234,567,908,12)
+                val result = sumOfBigThree(123, 321, 234, 567, 908, 12)
                 assertEqualsWith(
                     actual = result,
                     expected = 1796,
-                    errMessage = "Jika argumennya adalah 123, 321, 234,567,908,12 fungsi sumOfBigThree() seharusnya mengembalikkan nilai 1796"
+                    errMessage = "Jika argumennya adalah 123, 321, 234,567,908,12, fungsi sumOfBigThree() seharusnya mengembalikkan nilai 1796"
                 )
             }
 
             it("Latihan Opsional 1") {
-                val result = sumOfBigThree(4,2,1,23,4,54,7,88,8)
+                val result = sumOfBigThree(4, 2, 1, 23, 4, 54, 7, 88, 8)
                 assertEqualsWith(
                     actual = result,
                     expected = 165,
-                    errMessage = "Jika argumennya adalah 4,2,1,23,4,54,7,88,8 fungsi sumOfBigThree() seharusnya mengembalikkan nilai 165"
+                    errMessage = "Jika argumennya adalah 4,2,1,23,4,54,7,88,8, fungsi sumOfBigThree() seharusnya mengembalikkan nilai 165"
                 )
             }
 
+            it("Latihan Opsional 1") {
+                val randInt1 = (10..88).random()
+                val randInt2 = (10..88).random()
+                val randInt3 = (10..88).random()
+
+                val actual = sumOfBigThree(1, randInt1, randInt2, randInt3, 2)
+                val expected = randInt1 + randInt2 + randInt3
+
+                assertEqualsWith(
+                    actual = actual,
+                    expected = expected,
+                    errMessage = "Jika argumennya adalah 1, $randInt1, $randInt2, $randInt3, 2, fungsi sumOfBigThree() seharusnya mengembalikkan nilai $expected"
+                )
+            }
         }
 
         describe("Pengecekan Latihan Opsional 2") {
             it("Latihan Opsional 2") {
                 try {
                     Files.readAllLines(File("src/main/kotlin/com/dicoding/exam/latihanopsional2/App.kt").toPath())
-                        .filterIndexed { index, _ ->  index > 27}
+                        .filterIndexed { index, _ -> index > 27 }
                         .forEach { line ->
                             assertEqualsWith(
                                 actual = "fun" in line,
