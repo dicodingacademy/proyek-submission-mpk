@@ -17,13 +17,14 @@ package com.dicoding.exam.latihanopsional3
  *  Lengkapi fungsi di bawah dengan ketentuan sebagai berikut:
  *  - Fungsi menerima input string dan integer dengan rentang 1-100.
  *  - Fungsi harus mengembalikan string dengan ketentuan:
- *      - Jika string mengandung angka, maka kalikan angka pada string dengan angka yang diinput. Kemudian gabungkan dengan string yang diinput.
- *      - Jika string tidak mengandung angka, maka gabungkan angka yang dinput ke string yang diinput.
+ *      - Jika string mengandung angka, maka kalikan angka pada string dengan angka yang diinput.
+ *        Kemudian gabungkan string yang diinput dengan hasil kali tersebut.
+ *      - Jika string tidak mengandung angka, maka gabungkan string yang diinput dengan angka yang dinput.
  *
  *  Contoh:
- *  Input = str=dicoding123, int=10 -> Output = dicoding1230
- *  Input = str=Dicoding000010, int=100 -> Output = Dicoding1000
- *  Input = str=dicoding, int=100  -> Output = dicoding100
+ *  Input = manipulateString("dicoding123", 10) -> Output = dicoding1230 | Penjelasan: string mengandung angka 123. 123*10 = 1230 -> dicoding1230
+ *  Input = manipulateString("Dicoding000010", 100) -> Output = Dicoding1000 | Penjelasan: string mengandung angka 000010. Empat 0 di awal tidak dianggap, jadi 10 *100 = 1000 -> Dicoding1000
+ *  Input =  manipulateString("dicoding", 100) -> Output = dicoding100 | Penjelasan: string tidak mengandung angka. Langsung gabungkan docoding dengan 100 -> dicoding100
  *
  *  Modul terkait: Kotlin Fundamental & Collections
  */
