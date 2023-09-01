@@ -3,7 +3,7 @@
  *                                                                                                  *
  *          Agar dapat diperiksa dengan baik, hindari beberapa hal berikut:                         *
  *                                                                                                  *
- *          1. Mengubah nama method concatString()                                                  *
+ *          1. Mengubah nama concatString                                                 *
  *          2. Mengubah struktur project (menghapus, mengedit, dan memindahkan package)             *
  *                                                                                                  *
  ***************************************************************************************************/
@@ -15,15 +15,27 @@ import java.nio.file.Files
 
 /**
  *  TODO
- *  Ubahlah fungsi concatString() menjadi method yang dapat menggabungkan dua buah string.
- *  Namun, dengan syarat sebagai berikut:
+ *  Ubahlah fungsi concatString() menjadi sebuah lambad expression yang dapat menggabungkan dua buah string.
+ *  Dengan syarat sebagai berikut:
  *   - Tidak boleh menggunakan keyword `fun`
  *   - Tidak boleh mengandung karakter `{` dan `}`
  *
  *  Contoh:
- *  Input : string1=Hello, string2=Dicoding -> Output = HelloDicoding
+ *  Input : concatString("Hello", "Dicoding") -> Output = HelloDicoding
  *
  *  Modul terkait: Kotlin Fundamental & Functional Programming
+ */
+
+fun main() {
+    println(concatString("Hello", "Dicoding") == "HelloDicoding")
+    println(concatString("", "Dicoding") == "Dicoding")
+    println(concatString("Dicoding ", "Indonesia") == "Dicoding Indonesia")
+}
+
+/**
+ * SILAKAN UBAH FILE INI DARI HANYA DARI LINE 40 SAMPAI BAWAH.
+ * Pastikan tidak menggandung keyword 'fun' dan karakter '{' & '}
+ * Pastikan tidak mengubah nama 'concatString'
  */
 
 fun concatString(string1: String, string2: String): String {
