@@ -21,9 +21,9 @@ package com.dicoding.exam.latihanopsional4
  *      - Jika panjang string bernilai ganjil, maka yang dikembalikan adalah 1 karakter.
  *
  *  Contoh:
- *  Input = string=dicoding -> Output = od
- *  Input = string=dicodingindonesia  -> Output = i
- *  Input = string=A  -> Output = A
+ *  Input = getMiddleCharacters("dicoding") -> Output = od | Penjelasan: panjang string "dicoding" adalah 8 (genap) dan dua karakter paling tengah adalah "od"
+ *  Input = getMiddleCharacters("dicodingindonesia")  -> Output = i | Penjelasan: panjang string "dicodingindonesia" adalah 17 (ganjil) dan satu karakter paling tengah adalah "i"
+ *  Input = getMiddleCharacters("A")  -> Output = A | Penjelasan: panjang string "A" adalah 1 (ganjil) dan satu karakter paling tengah adalah "A"
  *
  *  Hint:  Kotlin Fundamental & Collections
  *
