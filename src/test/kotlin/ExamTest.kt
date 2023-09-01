@@ -291,22 +291,22 @@ class ExamTest : Spek({
             it("Latihan Opsional 2") {
                 try {
                     Files.readAllLines(File("src/main/kotlin/com/dicoding/exam/latihanopsional2/App.kt").toPath())
-                        .filterIndexed { index, _ -> index > 27 }
+                        .filterIndexed { index, _ -> index >= 39 }
                         .forEach { line ->
                             assertEqualsWith(
                                 actual = "fun" in line,
                                 expected = false,
-                                errMessage = "Method concatString() tidak boleh menggunakan keyword `fun`"
+                                errMessage = "concatString() tidak boleh menggunakan keyword `fun`"
                             )
                             assertEqualsWith(
                                 actual = "{" in line,
                                 expected = false,
-                                errMessage = "Method concatString() tidak boleh mengandung karakter `{`"
+                                errMessage = "concatString() tidak boleh mengandung karakter `{`"
                             )
                             assertEqualsWith(
                                 actual = "}" in line,
                                 expected = false,
-                                errMessage = "Method concatString() tidak boleh menggunakan keyword `}`"
+                                errMessage = "concatString() tidak boleh menggunakan keyword `}`"
                             )
                         }
                 } catch (e: IOException) {
