@@ -15,19 +15,19 @@ package com.dicoding.exam.latihanopsional5
 /**
  *  TODO
  *  Lengkapi fungsi di bawah dengan ketentuan sebagai berikut:
- *  - Fungsi menerima input Number dengan panjang digit 2-10.
+ *  - Fungsi menerima input Number dengan panjang digit 2-9.
  *  - Fungsi harus mengembalikan Integer yang merupakan hasil penjumlahan dari angka terkecil dan angka terbesar dari nilai yang diinput
  *
  *  Contoh:
- *  Input = number=987234 -> Output = 11 (2+9)
- *  Input = number=8812334 -> Output = 9 (1+8)
- *  Input = number=10 -> Output = 1 (0+1)
+ *  Input = minAndMax(987234) -> Output = 11 | Penjelasan: Angka terkecil= 2, angka terbesar=9 -> 2+9 -> 11
+ *  Input = minAndMax(8812334) -> Output = 9 | Penjelasan: Angka terkecil= 1, angka terbesar=8 -> 1+8 -> 9
+ *  Input = minAndMax(10) -> Output = 1 | Penjelasan: Angka terkecil= 0, angka terbesar=1 -> 0+1 - 1
  *
  *  Modul terkait: Kotlin Fundamental & Collections
  *
  */
 
-fun minAndMax(number: Number): Int {
+fun minAndMax(number: Int): Int {
     return 0
 }
 
