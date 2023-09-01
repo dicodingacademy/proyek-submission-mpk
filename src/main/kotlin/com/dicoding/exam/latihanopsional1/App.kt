@@ -15,11 +15,11 @@ package com.dicoding.exam.latihanopsional1
 /**
  *  TODO
  *  Lengkapi fungsi di bawah dengan ketentuan sebagai berikut:
- *  - Fungsi menerima 1 sampai 10 input bertipe integer tetapi hanya boleh ditampung dalam satu paramter, yaitu `numbers`.
- *  - Fungsi mengembalikan jumlahh dari maksimal 3 angka yang paling besar dalam bentuk string.
+ *  - Fungsi menerima 1 sampai 10 input bertipe integer tetapi hanya boleh ditampung dalam satu parameter, yaitu `numbers`.
+ *  - Fungsi mengembalikan jumlah dari maksimal 3 angka yang paling besar dalam bentuk string.
  *
  *  Contoh:
- *  Input = sumOfBigThree(1,2,3,4,5,6,7,8,9,10) -> Output = 27 | Penjelasan: 10 + 9 + 8 = 27
+ *  Input = sumOfBigThree(1, 2, 3, 4, 5, 6, 7, 8, 9, 10) -> Output = 27 | Penjelasan: 10 + 9 + 8 = 27
  *  Input = sumOfBigThree(22, 20, 21, 25, 24) -> Output = 71 | Penjelasan: 25 + 24 + 22 = 71
  *  Input = sumOfBigThree(100, 1000, 30, 1) -> Output = 1130 | Penjelasan: 1000 + 100 + 30 = 1130
  *
@@ -32,7 +32,7 @@ fun sumOfBigThree(vararg numbers: Int): Int {
 }
 
 fun main() {
-    println(sumOfBigThree(100, 1000, 30, 1) == 1130)
-    println(sumOfBigThree(22, 20, 21, 25, 24) == 71)
     println(sumOfBigThree(1, 2, 3, 4, 5, 6, 7, 8, 9, 104) == 27)
+    println(sumOfBigThree(22, 20, 21, 25, 24) == 71)
+    println(sumOfBigThree(100, 1000, 30, 1) == 1130)
 }
