@@ -347,7 +347,7 @@ class ExamTest : Spek({
                     assertEqualsWith(
                         actual = manipulateString(string, randInt),
                         expected = string + randInt,
-                        errMessage = "Jika argumennya adalah '$string' dan '$randInt', fungsi concatString() seharusnya mengembalikkan nilai ${
+                        errMessage = "Jika argumennya adalah '$string' dan '$randInt', fungsi manipulateString() seharusnya mengembalikkan nilai ${
                             string.plus(randInt)
                         }"
                     )
@@ -361,7 +361,7 @@ class ExamTest : Spek({
                     assertEqualsWith(
                         actual = manipulateString(string, randInt),
                         expected = "dicoding" + (randInt.times(101)),
-                        errMessage = "Jika argumennya adalah '$string' dan '$randInt', fungsi concatString() seharusnya mengembalikkan nilai ${
+                        errMessage = "Jika argumennya adalah '$string' dan '$randInt', fungsi manipulateString() seharusnya mengembalikkan nilai ${
                             "dicoding".plus(randInt.times(101))
                         }"
                     )
@@ -375,7 +375,7 @@ class ExamTest : Spek({
                 assertEqualsWith(
                     actual = result,
                     expected = "od",
-                    errMessage = "Jika argumennya adalah 'Dicoding', fungsi concatString() seharusnya mengembalikkan nilai 'od'"
+                    errMessage = "Jika argumennya adalah 'Dicoding', fungsi getMiddleCharacters() seharusnya mengembalikkan nilai 'od'"
                 )
             }
 
@@ -384,7 +384,7 @@ class ExamTest : Spek({
                 assertEqualsWith(
                     actual = result,
                     expected = "I",
-                    errMessage = "Jika argumennya adalah 'DicodingIndonesia', fungsi concatString() seharusnya mengembalikkan nilai 'I'"
+                    errMessage = "Jika argumennya adalah 'DicodingIndonesia', fungsi getMiddleCharacters() seharusnya mengembalikkan nilai 'I'"
                 )
             }
 
@@ -393,7 +393,7 @@ class ExamTest : Spek({
                 assertEqualsWith(
                     actual = result,
                     expected = "A",
-                    errMessage = "Jika argumennya adalah 'A', fungsi concatString() seharusnya mengembalikkan nilai 'A'"
+                    errMessage = "Jika argumennya adalah 'A', fungsi getMiddleCharacters() seharusnya mengembalikkan nilai 'A'"
                 )
             }
         }
@@ -404,7 +404,7 @@ class ExamTest : Spek({
                 assertEqualsWith(
                     actual = result,
                     expected = 13,
-                    errMessage = "Jika argumennya adalah '985684579', fungsi concatString() seharusnya mengembalikkan nilai '13'"
+                    errMessage = "Jika argumennya adalah '985684579', fungsi minAndMax() seharusnya mengembalikkan nilai '13'"
                 )
             }
 
@@ -413,7 +413,7 @@ class ExamTest : Spek({
                 assertEqualsWith(
                     actual = result,
                     expected = 2,
-                    errMessage = "Jika argumennya adalah '1111111', fungsi concatString() seharusnya mengembalikkan nilai '2'"
+                    errMessage = "Jika argumennya adalah '1111111', fungsi minAndMax() seharusnya mengembalikkan nilai '2'"
                 )
             }
 
@@ -422,7 +422,7 @@ class ExamTest : Spek({
                 assertEqualsWith(
                     actual = result,
                     expected = 8,
-                    errMessage = "Jika argumennya adalah '6423654', fungsi concatString() seharusnya mengembalikkan nilai '8'"
+                    errMessage = "Jika argumennya adalah '6423654', fungsi minAndMax() seharusnya mengembalikkan nilai '8'"
                 )
             }
         }
