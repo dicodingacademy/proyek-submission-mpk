@@ -24,7 +24,7 @@ package com.dicoding.exam.latihanopsional3
  *  Contoh:
  *  Input = manipulateString("dicoding123", 10) -> Output = dicoding1230 | Penjelasan: string mengandung angka 123. 123*10 = 1230 -> dicoding1230
  *  Input = manipulateString("Dicoding000010", 100) -> Output = Dicoding1000 | Penjelasan: string mengandung angka 000010. Empat 0 di awal tidak dianggap, jadi 10 *100 = 1000 -> Dicoding1000
- *  Input =  manipulateString("dicoding", 100) -> Output = dicoding100 | Penjelasan: string tidak mengandung angka. Langsung gabungkan docoding dengan 100 -> dicoding100
+ *  Input =  manipulateString("dicoding", 100) -> Output = dicoding100 | Penjelasan: string tidak mengandung angka. Langsung gabungkan dicoding dengan 100 -> dicoding100
  *
  *  Modul terkait: Kotlin Fundamental & Collections
  */
