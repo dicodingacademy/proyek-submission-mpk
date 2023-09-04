@@ -15,7 +15,7 @@ import java.nio.file.Files
 
 /**
  *  TODO
- *  Ubahlah fungsi concatString() menjadi sebuah lambad expression yang dapat menggabungkan dua buah string.
+ *  Ubahlah fungsi concatString() menjadi sebuah lambda expression yang dapat menggabungkan dua buah string.
  *  Dengan syarat sebagai berikut:
  *   - Tidak boleh menggunakan keyword `fun`
  *   - Tidak boleh mengandung karakter `{` dan `}`
