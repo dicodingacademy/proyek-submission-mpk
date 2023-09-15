@@ -15,8 +15,8 @@ package com.dicoding.exam.latihanopsional5
 /**
  *  TODO
  *  Lengkapi fungsi di bawah dengan ketentuan sebagai berikut:
- *  - Fungsi menerima input Number dengan panjang digit 2-9.
- *  - Fungsi harus mengembalikan Integer yang merupakan hasil penjumlahan dari angka terkecil dan angka terbesar dari nilai yang diinput
+ *  - Fungsi menerima input Integer dengan panjang digit 2-9.
+ *  - Fungsi harus mengembalikan Integer yang merupakan hasil penjumlahan dari angka terkecil dan angka terbesar dari nilai yang diinput.
  *
  *  Contoh:
  *  Input = minAndMax(987234) -> Output = 11 | Penjelasan: Angka terkecil= 2, angka terbesar=9 -> 2+9 -> 11
@@ -33,5 +33,6 @@ fun minAndMax(number: Int): Int {
 
 fun main() {
     println(minAndMax(987234) == 11)
-    println(minAndMax(8812334) == 9)
+    println(minAndMax(8812334) == 99)
+    println(minAndMax(10) == 1)
 }
