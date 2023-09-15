@@ -22,6 +22,8 @@ import java.nio.file.Files
  *
  *  Contoh:
  *  Input : concatString("Hello", "Dicoding") -> Output = HelloDicoding
+ *  Input : concatString("", "Dicoding") -> Output = Dicoding
+ *  Input : concatString("Dicoding ", "Indonesia") -> Output = Dicoding Indonesia
  *
  *  Modul terkait: Kotlin Fundamental & Functional Programming
  */
