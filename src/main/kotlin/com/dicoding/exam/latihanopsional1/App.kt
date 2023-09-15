@@ -16,7 +16,7 @@ package com.dicoding.exam.latihanopsional1
  *  TODO
  *  Lengkapi fungsi di bawah dengan ketentuan sebagai berikut:
  *  - Fungsi menerima 1 sampai 10 input bertipe integer tetapi hanya boleh ditampung dalam satu parameter, yaitu `numbers`.
- *  - Fungsi mengembalikan jumlah dari maksimal 3 angka yang paling besar dalam bentuk string.
+ *  - Fungsi mengembalikan jumlah dari maksimal 3 angka yang paling besar dalam bentuk integer.
  *
  *  Contoh:
  *  Input = sumOfBigThree(1, 2, 3, 4, 5, 6, 7, 8, 9, 10) -> Output = 27 | Penjelasan: 10 + 9 + 8 = 27
