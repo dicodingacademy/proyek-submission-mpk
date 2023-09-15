@@ -27,7 +27,6 @@ package com.dicoding.exam.latihanopsional1
  *  Modul terkait: Functional Programming dan Collections.
  */
 
-
 fun sumOfBigThree(vararg numbers: Int): Int {
     return 0
 }
