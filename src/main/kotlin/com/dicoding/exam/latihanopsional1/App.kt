@@ -22,6 +22,7 @@ package com.dicoding.exam.latihanopsional1
  *  Input = sumOfBigThree(1, 2, 3, 4, 5, 6, 7, 8, 9, 10) -> Output = 27 | Penjelasan: 10 + 9 + 8 = 27
  *  Input = sumOfBigThree(22, 20, 21, 25, 24) -> Output = 71 | Penjelasan: 25 + 24 + 22 = 71
  *  Input = sumOfBigThree(100, 1000, 30, 1) -> Output = 1130 | Penjelasan: 1000 + 100 + 30 = 1130
+ *  Input = sumOfBigThree(22, 22, 33, 22) -> Output = 77 | Penjelasan: 33 + 22 + 27 = 77
  *
  *  Modul terkait: Functional Programming dan Collections.
  */
@@ -35,4 +36,5 @@ fun main() {
     println(sumOfBigThree(1, 2, 3, 4, 5, 6, 7, 8, 9, 10) == 27)
     println(sumOfBigThree(22, 20, 21, 25, 24) == 71)
     println(sumOfBigThree(100, 1000, 30, 1) == 1130)
+    println(sumOfBigThree(22, 22, 33, 22) == 77)
 }
