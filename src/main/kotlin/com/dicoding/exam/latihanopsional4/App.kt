@@ -36,4 +36,5 @@ fun getMiddleCharacters(string: String): String {
 fun main() {
     println(getMiddleCharacters("dicodingindonesia") == "i")
     println(getMiddleCharacters("dicoding") == "od")
+    println(getMiddleCharacters("A") == "A")
 }
