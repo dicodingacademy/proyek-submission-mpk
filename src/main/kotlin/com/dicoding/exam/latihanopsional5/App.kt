@@ -3,10 +3,8 @@
  *                                                                                                  *
  *          Agar dapat diperiksa dengan baik, hindari beberapa hal berikut:                         *
  *                                                                                                  *
- *          1. Mengubah kode yang berada di dalam fungsi main()                                     *
- *          2. Mengubah atau menghapus kode yang sudah ada secara default                           *
- *          3. Membuat fungsi baru yang bukan merupakan tugas latihan                               *
- *          4. Mengubah struktur project (menghapus, mengedit, dan memindahkan package)             *
+ *          1. Mengubah nama concatString                                                 *
+ *          2. Mengubah struktur project (menghapus, mengedit, dan memindahkan package)             *
  *                                                                                                  *
  ***************************************************************************************************/
 
@@ -14,25 +12,31 @@ package com.dicoding.exam.latihanopsional5
 
 /**
  *  TODO
- *  Lengkapi fungsi di bawah dengan ketentuan sebagai berikut:
- *  - Fungsi menerima input Integer dengan panjang digit 2-9.
- *  - Fungsi harus mengembalikan Integer yang merupakan hasil penjumlahan dari angka terkecil dan angka terbesar dari nilai yang diinput.
+ *  Ubahlah fungsi concatString() menjadi sebuah lambda expression yang dapat menggabungkan dua buah string.
+ *  Dengan syarat sebagai berikut:
+ *   - Tidak boleh menggunakan keyword `fun`
+ *   - Tidak boleh mengandung karakter `{` dan `}`
  *
  *  Contoh:
- *  Input = minAndMax(987234) -> Output = 11 | Penjelasan: Angka terkecil= 2, angka terbesar=9 -> 2+9 -> 11
- *  Input = minAndMax(8812334) -> Output = 9 | Penjelasan: Angka terkecil= 1, angka terbesar=8 -> 1+8 -> 9
- *  Input = minAndMax(10) -> Output = 1 | Penjelasan: Angka terkecil= 0, angka terbesar=1 -> 0+1 -> 1
+ *  Input : concatString("Hello", "Dicoding") -> Output = HelloDicoding
+ *  Input : concatString("", "Dicoding") -> Output = Dicoding
+ *  Input : concatString("Dicoding ", "Indonesia") -> Output = Dicoding Indonesia
  *
- *  Modul terkait: Kotlin Fundamental & Collections
- *
+ *  Modul terkait: Kotlin Fundamental & Functional Programming
  */
 
-fun minAndMax(number: Int): Int {
-    return 0
+fun main() {
+    println(concatString("Hello", "Dicoding") == "HelloDicoding")
+    println(concatString("", "Dicoding") == "Dicoding")
+    println(concatString("Dicoding ", "Indonesia") == "Dicoding Indonesia")
 }
 
-fun main() {
-    println(minAndMax(987234) == 11)
-    println(minAndMax(8812334) == 99)
-    println(minAndMax(10) == 1)
+/**
+ * SILAKAN UBAH FILE INI DARI HANYA DARI LINE 40 SAMPAI BAWAH.
+ * Pastikan tidak menggandung keyword 'fun' dan karakter '{' & '}
+ * Pastikan tidak mengubah nama 'concatString'
+ */
+
+fun concatString(string1: String, string2: String): String {
+    return ""
 }
