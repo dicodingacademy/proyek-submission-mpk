@@ -5,21 +5,25 @@ import org.w3c.dom.Element
 import java.io.File
 import javax.xml.parsers.DocumentBuilderFactory
 
-data class Result (val isPassed: Boolean = false, val exam: String? = null, val testcaseName: String? = null, val errorMessage: String? = null)
+data class Result(
+    val isPassed: Boolean = false,
+    val exam: String? = null,
+    val testcaseName: String? = null,
+    val errorMessage: String? = null
+)
+
 data class FinalResult(val allExamPassed: Boolean, val exam: String?, val errors: List<String> = listOf())
 
 abstract class TestReportExam : DefaultTask() {
-    @TaskAction
-    fun run() {
 
-        val file = "${project.buildDir}/test-results/test/TEST-ExamTest.xml"
-        if (!File(file).isFile) {
-            return println("Test report no found")
+    private fun mappingTestResult(path: String): MutableList<Result> {
+        if (!File(path).isFile) {
+            return mutableListOf()
         }
 
         val factory = DocumentBuilderFactory.newInstance()
         val builder = factory.newDocumentBuilder()
-        val doc = builder.parse(File(file))
+        val doc = builder.parse(File(path))
 
         doc.normalizeDocument()
 
@@ -33,6 +37,7 @@ abstract class TestReportExam : DefaultTask() {
             val exam = testcaseName.split("--").first().trim()
             val readableTestcaseName = testcaseName.replace("$exam --", "").trim()
 
+
             if (failure !== null) {
                 val errorMessage = failure.getAttribute("message").split("AssertionFailedError: ").last()
                 results.add(Result(false, exam, readableTestcaseName, errorMessage))
@@ -40,6 +45,17 @@ abstract class TestReportExam : DefaultTask() {
                 results.add(Result(true, exam, readableTestcaseName))
             }
         }
+        return results
+    }
+
+    @TaskAction
+    fun run() {
+        /*
+        * this path should be dynamic, so we can adjust test file name without touch this path again.
+        * */
+        val mainTestResult = mappingTestResult("${project.buildDir}/test-results/test/TEST-ExamTestMain.xml")
+        val optionalTestResult = mappingTestResult("${project.buildDir}/test-results/test/TEST-ExamTestOptional.xml")
+        val results = mainTestResult.plus(optionalTestResult)
 
         val finalResult = mutableListOf<FinalResult>()
         val resultsGroupByExam = results.groupBy { it.exam }.values
@@ -59,12 +75,12 @@ abstract class TestReportExam : DefaultTask() {
             mutableFailedTest.forEachIndexed { index, result ->
                 if (index == 0) {
                     colored(enabled = true) {
-                        println("\n ${result.exam} - ERROR  ".red.bold )
+                        println("\n ${result.exam} - ERROR  ".red.bold)
                     }
                 } else {
                     errors.add(result.errorMessage ?: "")
                     colored(enabled = true) {
-                        println(" > ${result.errorMessage} " )
+                        println(" > ${result.errorMessage} ")
                     }
                 }
             }
@@ -72,6 +88,6 @@ abstract class TestReportExam : DefaultTask() {
         }
 
         val result = GsonBuilder().setPrettyPrinting().create()
-        File(project.projectDir.toString() +  "/result.json").writeText(result.toJson(finalResult))
+        File(project.projectDir.toString() + "/result.json").writeText(result.toJson(finalResult))
     }
 } 
