@@ -1,18 +1,8 @@
-import com.dicoding.exam.latihan1.isEvenNumber
-import com.dicoding.exam.latihan1.moreThanFive
-import com.dicoding.exam.latihan2.calculate
-import com.dicoding.exam.latihan2.result
-import com.dicoding.exam.latihan3.checkType
-import com.dicoding.exam.latihan4.vehicle
-import com.dicoding.exam.latihan5.multiple
-import com.dicoding.exam.latihan5.sum
 import com.dicoding.exam.latihanopsional1.sumOfBigThree
 import com.dicoding.exam.latihanopsional2.minAndMax
 import com.dicoding.exam.latihanopsional3.manipulateString
 import com.dicoding.exam.latihanopsional4.getMiddleCharacters
 import com.dicoding.exam.latihanopsional5.concatString
-import kotlinx.coroutines.async
-import kotlinx.coroutines.runBlocking
 import org.junit.jupiter.api.Assertions.fail
 import org.spekframework.spek2.Spek
 import org.spekframework.spek2.style.specification.describe
@@ -20,7 +10,6 @@ import java.io.File
 import java.io.IOException
 import java.nio.file.Files
 import kotlin.random.Random
-import kotlin.system.measureTimeMillis
 
 /****************************************************************************************************
  *                               Perhatian                                                          *
@@ -34,7 +23,7 @@ import kotlin.system.measureTimeMillis
  *                                                                                                  *
  ***************************************************************************************************/
 
-class OptionalTest : Spek({
+class ExamTestOptional : Spek({
     group("Pengujian otomatis latihan") {
         describe("Pengecekan Latihan Opsional 1") {
             it("Latihan Opsional 1") {
