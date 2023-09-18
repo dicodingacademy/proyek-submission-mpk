@@ -1,6 +1,9 @@
+import org.jmailen.gradle.kotlinter.tasks.LintTask
+
 plugins {
     kotlin("jvm") version "1.9.0"
     application
+    id("org.jmailen.kotlinter") version "3.16.0"
 }
 
 group = "org.example"
@@ -31,3 +34,14 @@ tasks.getByName<Test>("test") {
 }
 
 tasks.register<TestReportExam>("testReportExam")
+
+tasks.register<LintTask>("lint") {
+    group = "verification"
+    source(files("src/main"))
+    reports.set(
+        mapOf(
+            "plain" to file("build/lint-result/lint-report.txt"),
+            "json" to file("build/lint-result/lint-report.json")
+        )
+    )
+}
