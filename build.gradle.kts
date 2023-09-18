@@ -1,3 +1,5 @@
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.runBlocking
 import org.jmailen.gradle.kotlinter.tasks.LintTask
 
 plugins {
@@ -29,9 +31,13 @@ dependencies {
 }
 
 tasks.getByName<Test>("test") {
-    useJUnitPlatform()
-    finalizedBy("testReportExam")
+    runBlocking {
+        useJUnitPlatform()
+        delay(1000)
+        finalizedBy("testReportExam")
+    }
 }
+
 
 tasks.register<TestReportExam>("testReportExam")
 
