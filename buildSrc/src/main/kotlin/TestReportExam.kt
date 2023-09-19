@@ -48,17 +48,10 @@ abstract class TestReportExam : DefaultTask() {
         return results
     }
 
-    @TaskAction
-    fun run() {
-        /*
-        * this path should be dynamic, so we can adjust test file name without touch this path again.
-        * */
-        val mainTestResult = mappingTestResult("${project.buildDir}/test-results/test/TEST-ExamTestMain.xml")
-        val optionalTestResult = mappingTestResult("${project.buildDir}/test-results/test/TEST-ExamTestOptional.xml")
-        val results = mainTestResult.plus(optionalTestResult)
-
+    private fun getFinalResult(results: List<Result>): List<FinalResult> {
         val finalResult = mutableListOf<FinalResult>()
         val resultsGroupByExam = results.groupBy { it.exam }.values
+
         resultsGroupByExam.forEach { eachResult ->
             val failedTest = eachResult.filter { !it.isPassed }
             if (failedTest.isEmpty()) {
@@ -87,7 +80,21 @@ abstract class TestReportExam : DefaultTask() {
             finalResult.add(FinalResult(false, eachResult.first().exam, errors))
         }
 
+        return finalResult
+    }
+
+    @TaskAction
+    fun run() {/*
+        * this path should be dynamic, so we can adjust test file name without touch this path again.
+        * */
+        val mainTestResult = mappingTestResult("${project.buildDir}/test-results/test/TEST-ExamTestMain.xml")
+        val optionalTestResult = mappingTestResult("${project.buildDir}/test-results/test/TEST-ExamTestOptional.xml")
+
+        val mainCriteriaFinalResult = getFinalResult(mainTestResult)
+        val optionalCriteriaFinalResult = getFinalResult(optionalTestResult)
+
         val result = GsonBuilder().setPrettyPrinting().create()
-        File(project.projectDir.toString() + "/build/test-results/test/result.json").writeText(result.toJson(finalResult))
+        File(project.projectDir.toString() + "/build/test-results/test/main-criteria-result.json").writeText(result.toJson(mainCriteriaFinalResult))
+        File(project.projectDir.toString() + "/build/test-results/test/optional-criteria-result.json").writeText(result.toJson(optionalCriteriaFinalResult))
     }
 } 
