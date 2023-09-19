@@ -1,3 +1,4 @@
+import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import org.gradle.api.DefaultTask
 import org.gradle.api.tasks.TaskAction
@@ -15,6 +16,10 @@ data class Result(
 data class FinalResult(val allExamPassed: Boolean, val exam: String?, val errors: List<String> = listOf())
 
 abstract class TestReportExam : DefaultTask() {
+    object GsonFactory {
+        private val gson: Gson = GsonBuilder().setPrettyPrinting().create()
+        fun getGson(): Gson = gson
+    }
 
     private fun mappingTestResult(path: String): MutableList<Result> {
         if (!File(path).isFile) {
@@ -84,10 +89,9 @@ abstract class TestReportExam : DefaultTask() {
     }
 
     private fun writeFinalResult(finalResults: List<FinalResult>, fileName: String) {
-        val result = GsonBuilder().setPrettyPrinting().create()
         if (finalResults.isNotEmpty()) {
             File(project.buildDir.toString() + "/test-results/test/$fileName.json").writeText(
-                result.toJson(
+                GsonFactory.getGson().toJson(
                     finalResults
                 )
             )
