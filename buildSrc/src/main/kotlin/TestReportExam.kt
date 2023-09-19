@@ -88,6 +88,6 @@ abstract class TestReportExam : DefaultTask() {
         }
 
         val result = GsonBuilder().setPrettyPrinting().create()
-        File(project.projectDir.toString() + "/result.json").writeText(result.toJson(finalResult))
+        File(project.projectDir.toString() + "/build/test-results/test/result.json").writeText(result.toJson(finalResult))
     }
 } 
