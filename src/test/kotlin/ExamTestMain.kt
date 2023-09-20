@@ -24,7 +24,7 @@ import kotlin.system.measureTimeMillis
  *                                                                                                  *
  ***************************************************************************************************/
 
-class ExamTest : Spek({
+class ExamTestMain : Spek({
     group("Pengujian otomatis latihan") {
         describe("Pengecekkan Latihan 1") {
             it("Latihan 1") {

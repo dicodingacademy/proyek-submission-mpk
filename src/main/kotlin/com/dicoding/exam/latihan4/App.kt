@@ -29,9 +29,10 @@ package com.dicoding.exam.latihan4
 fun vehicle() = mapOf<String, String>()
 
 fun main() {
-    println("""
+    println(
+        """
         My Map Result:
         ${vehicle()}
-    """.trimIndent())
+        """.trimIndent()
+    )
 }
-

@@ -10,43 +10,30 @@
  *                                                                                                  *
  ***************************************************************************************************/
 
-package com.dicoding.exam.latihan2
+package com.dicoding.exam.latihanopsional1
 
 /**
- *  TODO 1
- *  Sesuaikan fungsi di bawah ini agar dapat mengembalikkan nilai dengan rumus
- *  perhitungan berikut:
+ *  TODO
+ *  Lengkapi fungsi di bawah dengan ketentuan sebagai berikut:
+ *  - Fungsi menerima 1 sampai 10 input bertipe integer tetapi hanya boleh ditampung dalam satu parameter, yaitu `numbers`.
+ *  - Fungsi mengembalikan jumlah dari maksimal 3 angka yang paling besar dalam bentuk integer.
  *
- *      valueA + (valueB - valueC)
+ *  Contoh:
+ *  Input = sumOfBigThree(1, 2, 3, 4, 5, 6, 7, 8, 9, 10) -> Output = 27 | Penjelasan: 10 + 9 + 8 = 27
+ *  Input = sumOfBigThree(22, 20, 21, 25, 24) -> Output = 71 | Penjelasan: 25 + 24 + 22 = 71
+ *  Input = sumOfBigThree(100, 1000, 30, 1) -> Output = 1130 | Penjelasan: 1000 + 100 + 30 = 1130
+ *  Input = sumOfBigThree(22, 22, 33, 22) -> Output = 77 | Penjelasan: 33 + 22 + 27 = 77
  *
- *  Jika valueC bernilai null, silakan tetapkan nilai 50 sebagai nilai default-nya
+ *  Modul terkait: Functional Programming dan Collections.
  */
-fun calculate(valueA: Int, valueB: Int, valueC: Int?): Int {
+
+fun sumOfBigThree(vararg numbers: Int): Int {
     return 0
 }
 
-/**
- *  TODO 2
- *  Sesuaikan fungsi di bawah ini agar dapat mengembalikkan text seperti berikut:
- *
- *      Result is ${result}
- */
-fun result(result: Int): String {
-    return ""
-}
-
 fun main() {
-    val valueA = 101
-    val valueB = 52
-    val valueC = 99
-
-    val resultA = calculate(valueA, valueB, valueC)
-    val resultB = calculate(valueA, valueB, null)
-
-    println(
-        """
-        ${result(resultA)}
-        ${result(resultB)}
-        """.trimIndent()
-    )
+    println(sumOfBigThree(1, 2, 3, 4, 5, 6, 7, 8, 9, 10) == 27)
+    println(sumOfBigThree(22, 20, 21, 25, 24) == 71)
+    println(sumOfBigThree(100, 1000, 30, 1) == 1130)
+    println(sumOfBigThree(22, 22, 33, 22) == 77)
 }

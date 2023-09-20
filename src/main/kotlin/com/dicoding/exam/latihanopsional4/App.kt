@@ -10,36 +10,31 @@
  *                                                                                                  *
  ***************************************************************************************************/
 
-package com.dicoding.exam.latihan3
+package com.dicoding.exam.latihanopsional4
 
 /**
  *  TODO
- *  Lengkapi fungsi di bawah ini agar dapat mengembalikkan tipe nilai sesuai dengan
- *  parameter yang dilampirkan. Contohnya seperti berikut:
+ *  Lengkapi fungsi di bawah dengan ketentuan sebagai berikut:
+ *  - Fungsi menerima input string dengan panjang karakter 1-100.
+ *  - Fungsi harus mengembalikan karakter yang ditengah dari string yang diinput.
+ *      - Jika panjang string bernilai genap, maka yang dikembalikan adalah 2 karakter.
+ *      - Jika panjang string bernilai ganjil, maka yang dikembalikan adalah 1 karakter.
  *
- *  input: checkType(10)
- *  output: "Yes! it's Integer"
+ *  Contoh:
+ *  Input = getMiddleCharacters("dicoding") -> Output = od | Penjelasan: panjang string "dicoding" adalah 8 (genap) dan dua karakter paling tengah adalah "od"
+ *  Input = getMiddleCharacters("dicodingindonesia")  -> Output = i | Penjelasan: panjang string "dicodingindonesia" adalah 17 (ganjil) dan satu karakter paling tengah adalah "i"
+ *  Input = getMiddleCharacters("A")  -> Output = A | Penjelasan: panjang string "A" adalah 1 (ganjil) dan satu karakter paling tengah adalah "A"
  *
- *  Berikut adalah beberapa tipe nilai yang wajib ada.
- *  • Integer
- *  • String
- *  • Boolean
- *  • Double
- *  • List<String>
- *  • Map<String, String>
+ *  Hint:  Kotlin Fundamental & Collections
  *
  */
-fun <T> checkType(args: T): String {
+
+fun getMiddleCharacters(string: String): String {
     return ""
 }
 
 fun main() {
-    println(
-        """
-        '[10, 9, 8 , 6]' is List? ${checkType(listOf(10, 9, 8, 6))}
-        'Dicoding Indonesia' is String? ${checkType("Dicoding Indonesia")}
-        'True' is Boolean? ${checkType(true)}
-        '10.01' is Double? ${checkType(10.01)}
-        """.trimIndent()
-    )
+    println(getMiddleCharacters("dicodingindonesia") == "i")
+    println(getMiddleCharacters("dicoding") == "od")
+    println(getMiddleCharacters("A") == "A")
 }

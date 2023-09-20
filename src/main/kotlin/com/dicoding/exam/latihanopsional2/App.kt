@@ -10,43 +10,29 @@
  *                                                                                                  *
  ***************************************************************************************************/
 
-package com.dicoding.exam.latihan2
+package com.dicoding.exam.latihanopsional2
 
 /**
- *  TODO 1
- *  Sesuaikan fungsi di bawah ini agar dapat mengembalikkan nilai dengan rumus
- *  perhitungan berikut:
+ *  TODO
+ *  Lengkapi fungsi di bawah dengan ketentuan sebagai berikut:
+ *  - Fungsi menerima input Integer dengan panjang digit 2-9.
+ *  - Fungsi harus mengembalikan Integer yang merupakan hasil penjumlahan dari angka terkecil dan angka terbesar dari nilai yang diinput.
  *
- *      valueA + (valueB - valueC)
+ *  Contoh:
+ *  Input = minAndMax(987234) -> Output = 11 | Penjelasan: Angka terkecil= 2, angka terbesar=9 -> 2+9 -> 11
+ *  Input = minAndMax(8812334) -> Output = 9 | Penjelasan: Angka terkecil= 1, angka terbesar=8 -> 1+8 -> 9
+ *  Input = minAndMax(10) -> Output = 1 | Penjelasan: Angka terkecil= 0, angka terbesar=1 -> 0+1 -> 1
  *
- *  Jika valueC bernilai null, silakan tetapkan nilai 50 sebagai nilai default-nya
+ *  Modul terkait: Kotlin Fundamental & Collections
+ *
  */
-fun calculate(valueA: Int, valueB: Int, valueC: Int?): Int {
+
+fun minAndMax(number: Int): Int {
     return 0
 }
 
-/**
- *  TODO 2
- *  Sesuaikan fungsi di bawah ini agar dapat mengembalikkan text seperti berikut:
- *
- *      Result is ${result}
- */
-fun result(result: Int): String {
-    return ""
-}
-
 fun main() {
-    val valueA = 101
-    val valueB = 52
-    val valueC = 99
-
-    val resultA = calculate(valueA, valueB, valueC)
-    val resultB = calculate(valueA, valueB, null)
-
-    println(
-        """
-        ${result(resultA)}
-        ${result(resultB)}
-        """.trimIndent()
-    )
+    println(minAndMax(987234) == 11)
+    println(minAndMax(8812334) == 99)
+    println(minAndMax(10) == 1)
 }

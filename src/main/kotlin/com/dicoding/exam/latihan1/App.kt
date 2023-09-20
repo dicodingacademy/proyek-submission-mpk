@@ -46,4 +46,3 @@ fun main() {
         println("range result is $result")
     }
 }
-
