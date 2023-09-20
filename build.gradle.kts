@@ -1,3 +1,5 @@
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.runBlocking
 import org.jmailen.gradle.kotlinter.tasks.LintTask
 
 plugins {
@@ -29,9 +31,13 @@ dependencies {
 }
 
 tasks.getByName<Test>("test") {
-    useJUnitPlatform()
-    finalizedBy("testReportExam")
+    runBlocking {
+        useJUnitPlatform()
+        delay(1000)
+        finalizedBy("testReportExam")
+    }
 }
+
 
 tasks.register<TestReportExam>("testReportExam")
 
@@ -44,4 +50,31 @@ tasks.register<LintTask>("lint") {
             "json" to file("build/lint-result/lint-report.json")
         )
     )
+}
+
+tasks.register("runMainCriteriaTest") {
+    doFirst {
+        exec {
+            commandLine("gradle", "test")
+            args("--tests", "ExamTestMain", "-q")
+        }
+    }
+}
+
+tasks.register("runOptionalCriteriaTest") {
+    doFirst {
+        exec {
+            commandLine("gradle", "test")
+            args("--tests", "ExamTestOptional", "-q")
+        }
+    }
+}
+
+tasks.register("runAllTest") {
+    doFirst {
+        exec {
+            commandLine("gradle", "test")
+            args("--continue", "-q")
+        }
+    }
 }
