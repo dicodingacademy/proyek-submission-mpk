@@ -33,6 +33,6 @@ fun minAndMax(number: Int): Int {
 
 fun main() {
     println(minAndMax(987234) == 11)
-    println(minAndMax(8812334) == 99)
+    println(minAndMax(8812334) == 9)
     println(minAndMax(10) == 1)
 }
