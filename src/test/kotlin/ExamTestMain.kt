@@ -125,6 +125,15 @@ class ExamTestMain : Spek({
             }
 
             it("Latihan 3") {
+                val result = checkType(true)
+                assertEqualsWith(
+                    expected = result,
+                    actual = "Yes! it's Boolean",
+                    errMessage = "Jika argumennya adalah `true`, fungsi checkType() seharusnya mengembalikkan pesan `Yes! it's Boolean`"
+                )
+            }
+
+            it("Latihan 3") {
                 val result = checkType("Dicoding Indonesia")
                 assertEqualsWith(
                     expected = result,
