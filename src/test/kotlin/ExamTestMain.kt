@@ -128,8 +128,8 @@ class ExamTestMain : Spek({
                 val result = checkType(true)
                 assertEqualsWith(
                     expected = result,
-                    actual = "Yes! it's Booelean",
-                    errMessage = "Jika argumennya adalah `50`, fungsi checkType() seharusnya mengembalikkan pesan `Yes! it's Integer`"
+                    actual = "Yes! it's Boolean",
+                    errMessage = "Jika argumennya adalah `true`, fungsi checkType() seharusnya mengembalikkan pesan `Yes! it's Boolean`"
                 )
             }
 
