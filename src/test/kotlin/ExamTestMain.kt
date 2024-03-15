@@ -1,7 +1,7 @@
 import com.dicoding.exam.exam1.isEvenNumber
 import com.dicoding.exam.exam1.moreThanFive
-import com.dicoding.exam.latihan2.calculate
-import com.dicoding.exam.latihan2.result
+import com.dicoding.exam.exam2.calculate
+import com.dicoding.exam.exam2.result
 import com.dicoding.exam.latihan3.checkType
 import com.dicoding.exam.latihan4.vehicle
 import com.dicoding.exam.latihan5.multiple
