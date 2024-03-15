@@ -1,4 +1,4 @@
-# Exam 1 - Control Flow
+# Exam 2 - Control Flow
 
 ## Ketentuan
 
