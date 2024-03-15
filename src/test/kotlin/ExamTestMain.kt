@@ -1,5 +1,5 @@
-import com.dicoding.exam.latihan1.isEvenNumber
-import com.dicoding.exam.latihan1.moreThanFive
+import com.dicoding.exam.exam1.isEvenNumber
+import com.dicoding.exam.exam1.moreThanFive
 import com.dicoding.exam.latihan2.calculate
 import com.dicoding.exam.latihan2.result
 import com.dicoding.exam.latihan3.checkType
@@ -76,7 +76,7 @@ class ExamTestMain : Spek({
             }
 
             it("Latihan 1") {
-                val expect = com.dicoding.exam.latihan1.result(20)
+                val expect = com.dicoding.exam.exam1.result(20)
                 assertEqualsWith(
                     expected = expect,
                     actual = 600,
