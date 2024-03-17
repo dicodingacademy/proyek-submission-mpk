@@ -4,8 +4,8 @@ import com.dicoding.exam.exam2.calculate
 import com.dicoding.exam.exam2.result
 import com.dicoding.exam.exam3.checkType
 import com.dicoding.exam.exam4.vehicle
-import com.dicoding.exam.latihan5.multiple
-import com.dicoding.exam.latihan5.sum
+import com.dicoding.exam.exam5.multiple
+import com.dicoding.exam.exam5.sum
 import kotlinx.coroutines.async
 import kotlinx.coroutines.runBlocking
 import org.spekframework.spek2.Spek
