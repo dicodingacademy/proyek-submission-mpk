@@ -1,5 +1,5 @@
 import com.dicoding.exam.optionalexam1.sumOfBigThree
-import com.dicoding.exam.latihanopsional2.minAndMax
+import com.dicoding.exam.optionalexam2.minAndMax
 import com.dicoding.exam.latihanopsional3.manipulateString
 import com.dicoding.exam.latihanopsional4.getMiddleCharacters
 import com.dicoding.exam.latihanopsional5.concatString
