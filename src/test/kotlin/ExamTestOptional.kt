@@ -1,4 +1,4 @@
-import com.dicoding.exam.latihanopsional1.sumOfBigThree
+import com.dicoding.exam.optionalexam1.sumOfBigThree
 import com.dicoding.exam.latihanopsional2.minAndMax
 import com.dicoding.exam.latihanopsional3.manipulateString
 import com.dicoding.exam.latihanopsional4.getMiddleCharacters
@@ -160,7 +160,7 @@ class ExamTestOptional : Spek({
         describe("Pengecekan Latihan Opsional 5") {
             it("Latihan Opsional 5") {
                 try {
-                    Files.readAllLines(File("src/main/kotlin/com/dicoding/exam/latihanopsional5/App.kt").toPath())
+                    Files.readAllLines(File("src/main/kotlin/com/dicoding/exam/latihanopsional5/OptionalExam1.kt").toPath())
                         .filterIndexed { index, _ -> index >= 39 }.forEach { line ->
                             assertEqualsWith(
                                 actual = "fun" in line,
