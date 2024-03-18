@@ -48,5 +48,4 @@ Jika kode pada `OptionalExam1.kt` sudah diperbaiki sesuai ketentuan, maka keluar
 true
 true
 true
-true
 ```

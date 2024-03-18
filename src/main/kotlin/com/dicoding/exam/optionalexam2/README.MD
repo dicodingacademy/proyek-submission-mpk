@@ -9,7 +9,7 @@
 3. Membuat fungsi baru yang bukan merupakan tugas latihan
 4. Mengubah struktur project (menghapus, mengedit, dan memindahkan package)
 
-## Deskripsi Latihan
+## Instruksi
 
 Untuk mengerjakan soal latihan ini, silakan buka file `OptionalExam2.kt`.
 

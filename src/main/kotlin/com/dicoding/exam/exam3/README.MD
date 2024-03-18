@@ -9,11 +9,11 @@
 3. Membuat fungsi baru yang bukan merupakan tugas latihan
 4. Mengubah struktur project (menghapus, mengedit, dan memindahkan package)
 
-## Deskripsi Latihan
+## Instruksi
 
 Untuk mengerjakan soal latihan ini, silakan buka file `Exam3.kt`.
 
-### TODO 
+### TODO
 
 Lengkapi fungsi `checkType` agar dapat mengembalikkan tipe nilai sesuai dengan parameter yang dilampirkan. Format
 keluaran yang diharapkan adalah sebagai berikut:
