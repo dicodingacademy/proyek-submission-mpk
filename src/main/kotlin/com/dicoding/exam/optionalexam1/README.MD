@@ -35,8 +35,8 @@ Modul terkait: Functional Programming dan Collections.
 - Masukan: `numbers` = `22, 22, 33, 22`
 - Keluaran: `77`
 - Penjelasan:
-    - Tiga angka terbesar dari masukan tersebut adalah `23, 22, 22`.
-    - Hasil perjumlahan dari `23 + 22 + 22` adalah `77`
+    - Tiga angka terbesar dari masukan tersebut adalah `33, 22, 22`.
+    - Hasil perjumlahan dari `33 + 22 + 22` adalah `77`
 
 ## Menguji Kode
 
