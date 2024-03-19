@@ -25,7 +25,7 @@ Sesuaikan fungsi `sum()` dengan kriteria seperti berikut:
 
 - Masukan: `valueA` = `10`, `valueB` = `10`
 - Keluaran: `20`
-- Penjelasan: Hasil dari pertingungan `10 + 10` adalah `20`.
+- Penjelasan: Hasil dari perhitungan `10 + 10` adalah `20`.
 
 ### TODO 2
 
@@ -39,7 +39,7 @@ Sesuaikan fungsi `multiple()` dengan kriteria seperti berikut:
 
 - Masukan: `valueA` = `20`, `valueB` = `20`
 - Keluaran: `400`
-- Penjelasan: Hasil dari pertingungan `20 x 20` adalah `400`.
+- Penjelasan: Hasil dari perhitungan `20 x 20` adalah `400`.
 
 ## Menguji Kode
 
