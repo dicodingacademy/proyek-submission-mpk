@@ -29,14 +29,14 @@ Modul terkait: Kotlin Fundamental & Collections
 - Masukan: `string` = `dicoding`
 - Keluaran: `od`
 - Penjelasan:
-    - Panjang teks `dicoding` adalah 8 karakter (genap). Karakter yang dikembalikan adalah `od`.
+    - Panjang teks `dicoding` adalah 8 karakter (genap). Karakter paling tengah adalah `od`.
 
 #### Contoh 2:
 
 - Masukan: `string` = `dicodingindonesia`
 - Keluaran: `i`
 - Penjelasan:
-    - Panjang teks `dicodingindonesia` adalah 15 karakter (ganjil). Karakter yang dikembalikan adalah `i`.
+    - Panjang teks `dicodingindonesia` adalah 15 karakter (ganjil). Karakter paling tengah adalah `i`.
 
 ## Menguji Kode
 
