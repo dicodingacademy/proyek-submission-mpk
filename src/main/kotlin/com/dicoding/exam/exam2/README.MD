@@ -27,7 +27,7 @@ Namun, jika `valueC` bernilai `null`, silakan tetapkan nilai `50` sebagai nilai 
 
 - Masukan: `valueA` = `101`, `valueB` = `52`, `valueC` = `99`
 - Keluaran: `54`
-- Penjelasan: Hasil dari pertingungan `101 x (52 + 99)` adalah `54`.
+- Penjelasan: Hasil dari pertingungan `101 x (52 - 99)` adalah `54`.
 
 #### Contoh 2:
 
@@ -35,7 +35,7 @@ Namun, jika `valueC` bernilai `null`, silakan tetapkan nilai `50` sebagai nilai 
 - Keluaran: `103`
 - Penjelasan:
     - Dikarenakan `valueC` bernilai `null`, maka digantikan oleh nilai _default_-nya yaitu `50`. Sehingga, hasil dari
-      pertingungan `101 x (52 + 50)` adalah `103`.
+      pertingungan `101 x (52 - 50)` adalah `103`.
 
 ### TODO 2
 
