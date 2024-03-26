@@ -1,11 +1,11 @@
-import com.dicoding.exam.latihan1.isEvenNumber
-import com.dicoding.exam.latihan1.moreThanFive
-import com.dicoding.exam.latihan2.calculate
-import com.dicoding.exam.latihan2.result
-import com.dicoding.exam.latihan3.checkType
-import com.dicoding.exam.latihan4.vehicle
-import com.dicoding.exam.latihan5.multiple
-import com.dicoding.exam.latihan5.sum
+import com.dicoding.exam.exam1.isEvenNumber
+import com.dicoding.exam.exam1.moreThanFive
+import com.dicoding.exam.exam2.calculate
+import com.dicoding.exam.exam2.result
+import com.dicoding.exam.exam3.checkType
+import com.dicoding.exam.exam4.vehicle
+import com.dicoding.exam.exam5.multiple
+import com.dicoding.exam.exam5.sum
 import kotlinx.coroutines.async
 import kotlinx.coroutines.runBlocking
 import org.spekframework.spek2.Spek
@@ -24,6 +24,7 @@ import kotlin.system.measureTimeMillis
  *                                                                                                  *
  ***************************************************************************************************/
 
+@Suppress("UNCHECKED_CAST")
 class ExamTestMain : Spek({
     group("Pengujian otomatis latihan") {
         describe("Pengecekkan Latihan 1") {
@@ -76,7 +77,7 @@ class ExamTestMain : Spek({
             }
 
             it("Latihan 1") {
-                val expect = com.dicoding.exam.latihan1.result(20)
+                val expect = com.dicoding.exam.exam1.result(20)
                 assertEqualsWith(
                     expected = expect,
                     actual = 600,
@@ -173,21 +174,21 @@ class ExamTestMain : Spek({
         describe("Pengecekkan latihan 4") {
             it("Latihan 4") {
                 val vehicle = vehicle()
-                (vehicle is Map).returnTrue("Fungsi vehicle() seharusnya mengembalikkan nilai dengan tipe data Map<>")
+                (vehicle is Map<*, *>).returnTrue("Fungsi vehicle() seharusnya mengembalikkan nilai dengan tipe data Map<>")
             }
 
             it("Latihan 4") {
-                val vehicle: Map<String, String> = vehicle()
+                val vehicle: Map<String, String> = vehicle() as Map<String, String>
                 (vehicle["type"] != null && vehicle["type"] == "motorcycle").returnTrue("Nilai kembalian vehicle() seharusnya terdapat key `type` dengan nilai `motorcycle`")
             }
 
             it("Latihan 4") {
-                val vehicle: Map<String, String> = vehicle()
+                val vehicle: Map<String, String> = vehicle() as Map<String, String>
                 (vehicle["maxSpeed"] != null && vehicle["maxSpeed"] == "230Km/s").returnTrue("Nilai kembalian vehicle() seharusnya terdapat key `maxSpeed` dengan nilai `230Km/s`")
             }
 
             it("Latihan 4") {
-                val vehicle: Map<String, String> = vehicle()
+                val vehicle: Map<String, String> = vehicle() as Map<String, String>
                 (vehicle["maxTank"] != null && vehicle["maxTank"] == "100Ltr").returnTrue("Nilai kembalian vehicle() seharusnya terdapat key `maxTank` dengan nilai `100Ltr`")
             }
         }

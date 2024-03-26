@@ -1,8 +1,8 @@
-import com.dicoding.exam.latihanopsional1.sumOfBigThree
-import com.dicoding.exam.latihanopsional2.minAndMax
-import com.dicoding.exam.latihanopsional3.manipulateString
-import com.dicoding.exam.latihanopsional4.getMiddleCharacters
-import com.dicoding.exam.latihanopsional5.concatString
+import com.dicoding.exam.optionalexam1.sumOfBigThree
+import com.dicoding.exam.optionalexam2.minAndMax
+import com.dicoding.exam.optionalexam3.manipulateString
+import com.dicoding.exam.optionalexam4.getMiddleCharacters
+import com.dicoding.exam.optionalexam5.concatString
 import org.junit.jupiter.api.Assertions.fail
 import org.spekframework.spek2.Spek
 import org.spekframework.spek2.style.specification.describe
@@ -160,8 +160,8 @@ class ExamTestOptional : Spek({
         describe("Pengecekan Latihan Opsional 5") {
             it("Latihan Opsional 5") {
                 try {
-                    Files.readAllLines(File("src/main/kotlin/com/dicoding/exam/latihanopsional5/App.kt").toPath())
-                        .filterIndexed { index, _ -> index >= 39 }.forEach { line ->
+                    Files.readAllLines(File("src/main/kotlin/com/dicoding/exam/optionalexam5/OptionalExam5.kt").toPath())
+                        .filterIndexed { index, _ -> index >= 1 }.forEach { line ->
                             assertEqualsWith(
                                 actual = "fun" in line,
                                 expected = false,
