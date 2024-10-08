@@ -18,7 +18,7 @@ Untuk mengerjakan soal latihan ini, silakan buka file `Exam2.kt`.
 Sesuaikan fungsi `calculate` agar dapat menghasilkan nilai akhir dengan rumus:
 
 ```text
-   calculate = valueA + (valueB - valueC)
+   calculate = valueA + valueB - valueC
 ```
 
 Namun, jika `valueC` bernilai `null`, silakan tetapkan nilai `50` sebagai nilai _default_-nya.
@@ -27,7 +27,7 @@ Namun, jika `valueC` bernilai `null`, silakan tetapkan nilai `50` sebagai nilai 
 
 - Masukan: `valueA` = `101`, `valueB` = `52`, `valueC` = `99`
 - Keluaran: `54`
-- Penjelasan: Hasil dari pertingungan `101 + (52 - 99)` adalah `54`.
+- Penjelasan: Hasil dari perhitungan `101 + 52 - 99` adalah `54`.
 
 #### Contoh 2:
 
@@ -35,11 +35,11 @@ Namun, jika `valueC` bernilai `null`, silakan tetapkan nilai `50` sebagai nilai 
 - Keluaran: `103`
 - Penjelasan:
     - Dikarenakan `valueC` bernilai `null`, maka digantikan oleh nilai _default_-nya yaitu `50`. Sehingga, hasil dari
-      pertingungan `101 + (52 - 50)` adalah `103`.
+      perhitungan `101 + 52 - 50` adalah `103`.
 
 ### TODO 2
 
-Sesuaikan fungsi `result` ini dapat mengembalikkan text seperti berikut:
+Sesuaikan fungsi `result` ini dapat mengembalikkan teks seperti berikut:
 
 ```markdown
 Result is $result
