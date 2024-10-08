@@ -18,7 +18,7 @@ Untuk mengerjakan soal latihan ini, silakan buka file `OptionalExam1.kt`.
 Sesuaikan fungsi `sumOfBigThree()` dengan ketentuan sebagai berikut:
 
 - Menerima 1 sampai 10 input bertipe integer tetapi hanya boleh ditampung dalam satu parameter, yaitu `numbers`.
-- Mengembalikan nilai perjumlahan dari 3 angka yang paling besar dalam bentuk integer.
+- Mengembalikan nilai penjumlahan dari 3 angka yang paling besar dalam bentuk integer.
 
 Modul terkait: Functional Programming dan Collections.
 
