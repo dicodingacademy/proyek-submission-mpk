@@ -29,51 +29,51 @@ class ExamTestMain : Spek({
     group("Pengujian otomatis latihan") {
         describe("Pengecekkan Latihan 1") {
             it("Latihan 1") {
-                isEvenNumber(2).returnTrue(errMessage = "Jika argumennya adalah 2, fungsi isEvenNumber() seharusnya mengembalikkan nilai true")
+                isEvenNumber(2).returnTrue(errMessage = "Jika argumennya adalah 2, fungsi isEvenNumber() seharusnya mengembalikan nilai true")
             }
 
             it("Latihan 1") {
-                isEvenNumber(6).returnTrue(errMessage = "Jika argumennya adalah 6, fungsi isEvenNumber() seharusnya mengembalikkan nilai true")
+                isEvenNumber(6).returnTrue(errMessage = "Jika argumennya adalah 6, fungsi isEvenNumber() seharusnya mengembalikan nilai true")
             }
 
             it("Latihan 1") {
-                isEvenNumber(7).returnFalse(errMessage = "Jika argumennya adalah 7, fungsi isEvenNumber() seharusnya mengembalikkan nilai false")
+                isEvenNumber(7).returnFalse(errMessage = "Jika argumennya adalah 7, fungsi isEvenNumber() seharusnya mengembalikan nilai false")
             }
 
             it("Latihan 1") {
-                isEvenNumber(1).returnFalse(errMessage = "Jika argumennya adalah 1, fungsi isEvenNumber() seharusnya mengembalikkan nilai false")
+                isEvenNumber(1).returnFalse(errMessage = "Jika argumennya adalah 1, fungsi isEvenNumber() seharusnya mengembalikan nilai false")
             }
 
             for (number in 1..99 step 2) {
                 it("Latihan 1") {
-                    isEvenNumber(number).returnFalse(errMessage = "Jika argumennya adalah $number, fungsi isEvenNumber() seharusnya mengembalikkan nilai false")
+                    isEvenNumber(number).returnFalse(errMessage = "Jika argumennya adalah $number, fungsi isEvenNumber() seharusnya mengembalikan nilai false")
                 }
             }
 
             for (number in 0..100 step 2) {
                 it("Latihan 1") {
-                    isEvenNumber(number).returnTrue(errMessage = "Jika argumennya adalah $number, fungsi isEvenNumber() seharusnya mengembalikkan nilai true")
+                    isEvenNumber(number).returnTrue(errMessage = "Jika argumennya adalah $number, fungsi isEvenNumber() seharusnya mengembalikan nilai true")
                 }
             }
 
             it("Latihan 1") {
-                moreThanFive(1).returnFalse(errMessage = "Jika argumennya adalah 1, fungsi moreThanFive() seharusnya mengembalikkan nilai false")
+                moreThanFive(1).returnFalse(errMessage = "Jika argumennya adalah 1, fungsi moreThanFive() seharusnya mengembalikan nilai false")
             }
 
             it("Latihan 1") {
-                moreThanFive(3).returnFalse(errMessage = "Jika argumennya adalah 3, fungsi moreThanFive() seharusnya mengembalikkan nilai false")
+                moreThanFive(3).returnFalse(errMessage = "Jika argumennya adalah 3, fungsi moreThanFive() seharusnya mengembalikan nilai false")
             }
 
             it("Latihan 1") {
-                moreThanFive(5).returnFalse(errMessage = "Jika argumennya adalah 5, fungsi moreThanFive() seharusnya mengembalikkan nilai false")
+                moreThanFive(5).returnFalse(errMessage = "Jika argumennya adalah 5, fungsi moreThanFive() seharusnya mengembalikan nilai false")
             }
 
             it("Latihan 1") {
-                moreThanFive(10).returnTrue(errMessage = "Jika argumennya adalah 10, fungsi moreThanFive() seharusnya mengembalikkan nilai true")
+                moreThanFive(10).returnTrue(errMessage = "Jika argumennya adalah 10, fungsi moreThanFive() seharusnya mengembalikan nilai true")
             }
 
             it("Latihan 1") {
-                moreThanFive(30).returnTrue(errMessage = "Jika argumennya adalah 30, fungsi moreThanFive() seharusnya mengembalikkan nilai true")
+                moreThanFive(30).returnTrue(errMessage = "Jika argumennya adalah 30, fungsi moreThanFive() seharusnya mengembalikan nilai true")
             }
 
             it("Latihan 1") {
@@ -81,7 +81,7 @@ class ExamTestMain : Spek({
                 assertEqualsWith(
                     expected = expect,
                     actual = 600,
-                    errMessage = "Jika argumennya adalah 20, fungsi result() seharusnya mengembalikkan nilai 600"
+                    errMessage = "Jika argumennya adalah 20, fungsi result() seharusnya mengembalikan nilai 600"
                 )
             }
         }
@@ -92,7 +92,7 @@ class ExamTestMain : Spek({
                 assertEqualsWith(
                     expected = result,
                     actual = 54,
-                    errMessage = "Jika argumen untuk parameter valueA adalah `101`, valueB adalah `52`, dan valueC adalah `99`, fungsi calculate() seharusnya mengembalikkan nilai 54"
+                    errMessage = "Jika argumen untuk parameter valueA adalah `101`, valueB adalah `52`, dan valueC adalah `99`, fungsi calculate() seharusnya mengembalikan nilai 54"
                 )
             }
 
@@ -101,7 +101,7 @@ class ExamTestMain : Spek({
                 assertEqualsWith(
                     expected = result,
                     actual = 103,
-                    errMessage = "Jika argumen untuk parameter valueA adalah `101`, valueB adalah `52`, dan valueC adalah `null`, fungsi calculate() seharusnya mengembalikkan nilai 103"
+                    errMessage = "Jika argumen untuk parameter valueA adalah `101`, valueB adalah `52`, dan valueC adalah `null`, fungsi calculate() seharusnya mengembalikan nilai 103"
                 )
             }
 
@@ -110,7 +110,7 @@ class ExamTestMain : Spek({
                 assertEqualsWith(
                     expected = result,
                     actual = "Result is 103",
-                    errMessage = "Jika argumennya adalah 103, fungsi result() seharusnya mengembalikkan pesan `Result is 103`"
+                    errMessage = "Jika argumennya adalah 103, fungsi result() seharusnya mengembalikan pesan `Result is 103`"
                 )
             }
         }
@@ -121,7 +121,7 @@ class ExamTestMain : Spek({
                 assertEqualsWith(
                     expected = result,
                     actual = "Yes! it's Integer",
-                    errMessage = "Jika argumennya adalah `50`, fungsi checkType() seharusnya mengembalikkan pesan `Yes! it's Integer`"
+                    errMessage = "Jika argumennya adalah `50`, fungsi checkType() seharusnya mengembalikan pesan `Yes! it's Integer`"
                 )
             }
 
@@ -130,7 +130,7 @@ class ExamTestMain : Spek({
                 assertEqualsWith(
                     expected = result,
                     actual = "Yes! it's Boolean",
-                    errMessage = "Jika argumennya adalah `true`, fungsi checkType() seharusnya mengembalikkan pesan `Yes! it's Boolean`"
+                    errMessage = "Jika argumennya adalah `true`, fungsi checkType() seharusnya mengembalikan pesan `Yes! it's Boolean`"
                 )
             }
 
@@ -139,7 +139,7 @@ class ExamTestMain : Spek({
                 assertEqualsWith(
                     expected = result,
                     actual = "Yes! it's String",
-                    errMessage = "Jika argumennya adalah `Dicoding Indonesia`, fungsi checkType() seharusnya mengembalikkan pesan `Yes! it's String`"
+                    errMessage = "Jika argumennya adalah `Dicoding Indonesia`, fungsi checkType() seharusnya mengembalikan pesan `Yes! it's String`"
                 )
             }
 
@@ -148,7 +148,7 @@ class ExamTestMain : Spek({
                 assertEqualsWith(
                     expected = result,
                     actual = "Yes! it's Double",
-                    errMessage = "Jika argumennya adalah `1.0`, fungsi checkType() seharusnya mengembalikkan pesan `Yes! it's Double`"
+                    errMessage = "Jika argumennya adalah `1.0`, fungsi checkType() seharusnya mengembalikan pesan `Yes! it's Double`"
                 )
             }
 
@@ -157,7 +157,7 @@ class ExamTestMain : Spek({
                 assertEqualsWith(
                     expected = result,
                     actual = "Yes! it's List",
-                    errMessage = "Jika argumennya adalah `listOf<String>()`, fungsi checkType() seharusnya mengembalikkan pesan `Yes! it's List`"
+                    errMessage = "Jika argumennya adalah `listOf<String>()`, fungsi checkType() seharusnya mengembalikan pesan `Yes! it's List`"
                 )
             }
 
@@ -166,7 +166,7 @@ class ExamTestMain : Spek({
                 assertEqualsWith(
                     expected = result,
                     actual = "Yes! it's Map",
-                    errMessage = "Jika argumennya adalah `mapOf<String, String>()`, fungsi checkType() seharusnya mengembalikkan pesan `Yes! it's Map`"
+                    errMessage = "Jika argumennya adalah `mapOf<String, String>()`, fungsi checkType() seharusnya mengembalikan pesan `Yes! it's Map`"
                 )
             }
         }
@@ -174,7 +174,7 @@ class ExamTestMain : Spek({
         describe("Pengecekkan latihan 4") {
             it("Latihan 4") {
                 val vehicle = vehicle()
-                (vehicle is Map<*, *>).returnTrue("Fungsi vehicle() seharusnya mengembalikkan nilai dengan tipe data Map<>")
+                (vehicle is Map<*, *>).returnTrue("Fungsi vehicle() seharusnya mengembalikan nilai dengan tipe data Map<>")
             }
 
             it("Latihan 4") {
@@ -207,14 +207,14 @@ class ExamTestMain : Spek({
             it("Latihan 5") {
                 runBlocking {
                     val result = async { sum(5, 5) }
-                    (result.await() == 10).returnTrue("Jika argumen untuk parameter a adalah 5 dan b adalah 5, fungsi sum() seharusnya mengembalikkan nilai 10")
+                    (result.await() == 10).returnTrue("Jika argumen untuk parameter a adalah 5 dan b adalah 5, fungsi sum() seharusnya mengembalikan nilai 10")
                 }
             }
 
             it("Latihan 5") {
                 runBlocking {
                     val result = async { sum(100, 7) }
-                    (result.await() == 107).returnTrue("Jika argumen untuk parameter a adalah 100 dan b adalah 7, fungsi sum() seharusnya mengembalikkan nilai 107")
+                    (result.await() == 107).returnTrue("Jika argumen untuk parameter a adalah 100 dan b adalah 7, fungsi sum() seharusnya mengembalikan nilai 107")
                 }
             }
 
@@ -231,14 +231,14 @@ class ExamTestMain : Spek({
             it("Latihan 5") {
                 runBlocking {
                     val result = async { multiple(6, 6) }
-                    (result.await() == 36).returnTrue("Jika argumen untuk parameter a adalah 6 dan b adalah 6, fungsi multiple() seharusnya mengembalikkan nilai 36")
+                    (result.await() == 36).returnTrue("Jika argumen untuk parameter a adalah 6 dan b adalah 6, fungsi multiple() seharusnya mengembalikan nilai 36")
                 }
             }
 
             it("Latihan 5") {
                 runBlocking {
                     val result = async { multiple(5, 5) }
-                    (result.await() == 25).returnTrue("Jika argumen untuk parameter a adalah 5 dan b adalah 5, fungsi multiple() seharusnya mengembalikkan nilai 25")
+                    (result.await() == 25).returnTrue("Jika argumen untuk parameter a adalah 5 dan b adalah 5, fungsi multiple() seharusnya mengembalikan nilai 25")
                 }
             }
         }

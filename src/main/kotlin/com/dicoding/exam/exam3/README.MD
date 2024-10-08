@@ -15,7 +15,7 @@ Untuk mengerjakan soal latihan ini, silakan buka file `Exam3.kt`.
 
 ### TODO
 
-Lengkapi fungsi `checkType` agar dapat mengembalikkan tipe nilai sesuai dengan parameter yang dilampirkan. Format
+Lengkapi fungsi `checkType` agar dapat mengembalikan tipe nilai sesuai dengan parameter yang dilampirkan. Format
 keluaran yang diharapkan adalah sebagai berikut:
 
 ```markdown

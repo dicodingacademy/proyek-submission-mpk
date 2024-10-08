@@ -39,7 +39,7 @@ Namun, jika `valueC` bernilai `null`, silakan tetapkan nilai `50` sebagai nilai 
 
 ### TODO 2
 
-Sesuaikan fungsi `result` ini dapat mengembalikkan teks seperti berikut:
+Sesuaikan fungsi `result` ini dapat mengembalikan teks seperti berikut:
 
 ```markdown
 Result is $result

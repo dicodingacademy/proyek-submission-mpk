@@ -19,7 +19,7 @@ Sesuaikan fungsi `sum()` dengan kriteria seperti berikut:
 
 - Jadikan sebagai suspending function dengan menambahkan `suspend` operator
 - Menambahkan delay `3 detik`
-- Mengembalikkan nilai kembalian hasil dari perhitungan dengan rumus `valueA + valueB`
+- mengembalikan nilai kembalian hasil dari perhitungan dengan rumus `valueA + valueB`
 
 #### Contoh:
 
@@ -33,7 +33,7 @@ Sesuaikan fungsi `multiple()` dengan kriteria seperti berikut:
 
 - Jadikan sebagai suspending function dengan menambahkan `suspend` operator
 - Menambahkan delay `2 detik`
-- Mengembalikkan nilai kembalian hasil dari perhitungan dengan rumus `valueA x valueB`
+- mengembalikan nilai kembalian hasil dari perhitungan dengan rumus `valueA x valueB`
 
 #### Contoh:
 
