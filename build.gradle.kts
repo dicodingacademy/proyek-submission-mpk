@@ -56,7 +56,7 @@ tasks.register<LintTask>("lint") {
 tasks.register<ExecOperationsTask>("runMainCriteriaTest") {
     doFirst {
         execOperations.exec {
-            commandLine("gradle", "test")
+            commandLine("./gradlew", "test")
             args("--tests", "ExamTestMain", "-q")
         }
     }
@@ -65,7 +65,7 @@ tasks.register<ExecOperationsTask>("runMainCriteriaTest") {
 tasks.register<ExecOperationsTask>("runOptionalCriteriaTest") {
     doFirst {
         execOperations.exec {
-            commandLine("gradle", "test")
+            commandLine("./gradlew", "test")
             args("--tests", "ExamTestOptional", "-q")
         }
     }
@@ -74,7 +74,7 @@ tasks.register<ExecOperationsTask>("runOptionalCriteriaTest") {
 tasks.register<ExecOperationsTask>("runAllTest") {
     doFirst {
         execOperations.exec() {
-            commandLine("gradle", "test")
+            commandLine("./gradlew", "test")
             args("--continue", "-q")
         }
     }
