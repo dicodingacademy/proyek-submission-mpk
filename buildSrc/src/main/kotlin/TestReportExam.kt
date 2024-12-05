@@ -90,7 +90,7 @@ abstract class TestReportExam : DefaultTask() {
 
     private fun writeFinalResult(finalResults: List<FinalResult>, fileName: String) {
         if (finalResults.isNotEmpty()) {
-            File(project.buildDir.toString() + "/test-results/test/$fileName.json").writeText(
+            File(project.layout.buildDirectory.toString() + "/test-results/test/$fileName.json").writeText(
                 GsonFactory.getGson().toJson(
                     finalResults
                 )
@@ -103,8 +103,8 @@ abstract class TestReportExam : DefaultTask() {
         /*
         * this path should be dynamic, so we can adjust test file name without touch this path again.
         * */
-        val mainTestResult = mappingTestResult("${project.buildDir}/test-results/test/TEST-ExamTestMain.xml")
-        val optionalTestResult = mappingTestResult("${project.buildDir}/test-results/test/TEST-ExamTestOptional.xml")
+        val mainTestResult = mappingTestResult("${project.layout.buildDirectory}/test-results/test/TEST-ExamTestMain.xml")
+        val optionalTestResult = mappingTestResult("${project.layout.buildDirectory}/test-results/test/TEST-ExamTestOptional.xml")
 
         val mainCriteriaFinalResult = getFinalResult(mainTestResult)
         val optionalCriteriaFinalResult = getFinalResult(optionalTestResult)
@@ -112,4 +112,4 @@ abstract class TestReportExam : DefaultTask() {
         writeFinalResult(finalResults = mainCriteriaFinalResult, fileName = "main-criteria-result")
         writeFinalResult(finalResults = optionalCriteriaFinalResult, fileName = "optional-criteria-result")
     }
-} 
+}
