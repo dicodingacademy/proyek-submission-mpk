@@ -2,6 +2,8 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.runBlocking
 import org.jmailen.gradle.kotlinter.tasks.LintTask
 
+open class ExecOperationsTask @Inject constructor(@Internal val execOperations: ExecOperations) : DefaultTask()
+
 plugins {
     kotlin("jvm") version "1.9.0"
     application
@@ -9,7 +11,7 @@ plugins {
 }
 
 group = "org.example"
-version = "2.1.3"
+version = "2.1.4"
 
 repositories {
     mavenCentral()
@@ -38,7 +40,6 @@ tasks.getByName<Test>("test") {
     }
 }
 
-
 tasks.register<TestReportExam>("testReportExam")
 
 tasks.register<LintTask>("lint") {
@@ -52,28 +53,28 @@ tasks.register<LintTask>("lint") {
     )
 }
 
-tasks.register("runMainCriteriaTest") {
+tasks.register<ExecOperationsTask>("runMainCriteriaTest") {
     doFirst {
-        exec {
-            commandLine("gradle", "test")
+        execOperations.exec {
+            commandLine("./gradlew", "test")
             args("--tests", "ExamTestMain", "-q")
         }
     }
 }
 
-tasks.register("runOptionalCriteriaTest") {
+tasks.register<ExecOperationsTask>("runOptionalCriteriaTest") {
     doFirst {
-        exec {
-            commandLine("gradle", "test")
+        execOperations.exec {
+            commandLine("./gradlew", "test")
             args("--tests", "ExamTestOptional", "-q")
         }
     }
 }
 
-tasks.register("runAllTest") {
+tasks.register<ExecOperationsTask>("runAllTest") {
     doFirst {
-        exec {
-            commandLine("gradle", "test")
+        execOperations.exec() {
+            commandLine("./gradlew", "test")
             args("--continue", "-q")
         }
     }
