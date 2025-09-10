@@ -1,4 +1,4 @@
-# Exam 4 - Collections
+# Exam 4 - Object-Oriented Programming (OOP)
 
 ## Ketentuan
 
@@ -15,23 +15,41 @@ Untuk mengerjakan soal latihan ini, silakan buka file `Exam4.kt`.
 
 ### TODO
 
-Lengkapi inisialisasi fungsi `vehicle()` dengan tipe kembalian `Map` yang bernilai key-value berikut:
+Lengkapi class `Car` dan `ElectricCar` agar dapat berjalan sesuai ketentuan berikut:
 
-- `key`: `type`
-- `value`: `motorcycle`
+1. **Class `Car`**
+    - Tambahkan **property** `brand` (String) dan `year` (Int)
+    - Tambahkan **method** `getCarInfo()` yang mengembalikan informasi dalam format:
+      ```
+      $brand keluaran tahun $year
+      ```
 
+2. **Class `ElectricCar`** (subclass dari `Car`)
+    - Tambahkan **property** `batteryCapacity` (Int)
+    - Override method `getCarInfo()` agar mengembalikan informasi dalam format:
+      ```
+      $brand keluaran tahun $year dengan kapasitas baterai $batteryCapacity kWh
+      ```
 
-- `key`: `maxSpeed`
-- `value`: `230Km/s`
+#### Contoh 1:
 
+- Masukan (kode di main):
+  ```kotlin
+  val car = Car("Toyota", 2020)
+  println(car.getCarInfo())
+- Keluaran: `Toyota keluaran tahun 2020`
+- Penjelasan: Object `Car` dibuat dengan brand `Toyota` dan year `2020`. Method `getCarInfo()` menampilkan data sesuai
+  format.
 
-- `key`: `maxTank`
-- `value`: `100Ltr`
+#### Contoh 2:
 
-#### Contoh :
-
-- Masukan: -
-- Keluaran: `{type=motorcycle, maxSpeed=230Km/s, maxTank=100Ltr}`
+- Masukan (kode di main):
+  ```kotlin
+  val electricCar = ElectricCar("Tesla", 2023, 100)
+  println(electricCar.getCarInfo())
+- Keluaran: `Tesla keluaran tahun 2023 dengan kapasitas baterai 100 kWh`
+- Penjelasan: Object `ElectricCar` dibuat dengan brand `Tesla`, year `2023`, dan kapasitas baterai `100`. Method
+  `getCarInfo()` menampilkan data sesuai format method override.
 
 ## Menguji Kode
 
@@ -40,6 +58,6 @@ Untuk menguji kode, silakan jalankan fungsi `main` pada file `Exam4Main.kt`.
 Jika kode pada `Exam4.kt` sudah diperbaiki sesuai ketentuan, maka keluarannya akan seperti berikut:
 
 ```
-My Map Result:
-{type=motorcycle, maxSpeed=230Km/s, maxTank=100Ltr}
+Toyota keluaran tahun 2020
+Tesla keluaran tahun 2023 dengan kapasitas baterai 100 kWh
 ```
