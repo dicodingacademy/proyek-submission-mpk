@@ -2,8 +2,9 @@ import com.dicoding.exam.exam1.isEvenNumber
 import com.dicoding.exam.exam1.moreThanFive
 import com.dicoding.exam.exam2.calculate
 import com.dicoding.exam.exam2.result
-import com.dicoding.exam.exam3.checkType
-import com.dicoding.exam.exam4.vehicle
+import com.dicoding.exam.exam3.vehicle
+import com.dicoding.exam.exam4.Car
+import com.dicoding.exam.exam4.ElectricCar
 import com.dicoding.exam.exam5.multiple
 import com.dicoding.exam.exam5.sum
 import kotlinx.coroutines.async
@@ -117,79 +118,65 @@ class ExamTestMain : Spek({
 
         describe("Pengecekkan latihan 3") {
             it("Latihan 3") {
-                val result = checkType(50)
-                assertEqualsWith(
-                    expected = result,
-                    actual = "Yes! it's Integer",
-                    errMessage = "Jika argumennya adalah `50`, fungsi checkType() seharusnya mengembalikan pesan `Yes! it's Integer`"
-                )
+                val vehicle = vehicle()
+                (vehicle is Map<*, *>).returnTrue("Fungsi vehicle() seharusnya mengembalikan nilai dengan tipe data Map<>")
             }
 
             it("Latihan 3") {
-                val result = checkType(true)
-                assertEqualsWith(
-                    expected = result,
-                    actual = "Yes! it's Boolean",
-                    errMessage = "Jika argumennya adalah `true`, fungsi checkType() seharusnya mengembalikan pesan `Yes! it's Boolean`"
-                )
+                val vehicle: Map<String, String> = vehicle() as Map<String, String>
+                (vehicle["type"] != null && vehicle["type"] == "motorcycle").returnTrue("Nilai kembalian vehicle() seharusnya terdapat key `type` dengan nilai `motorcycle`")
             }
 
             it("Latihan 3") {
-                val result = checkType("Dicoding Indonesia")
-                assertEqualsWith(
-                    expected = result,
-                    actual = "Yes! it's String",
-                    errMessage = "Jika argumennya adalah `Dicoding Indonesia`, fungsi checkType() seharusnya mengembalikan pesan `Yes! it's String`"
-                )
+                val vehicle: Map<String, String> = vehicle() as Map<String, String>
+                (vehicle["maxSpeed"] != null && vehicle["maxSpeed"] == "230Km/s").returnTrue("Nilai kembalian vehicle() seharusnya terdapat key `maxSpeed` dengan nilai `230Km/s`")
             }
 
             it("Latihan 3") {
-                val result = checkType(1.0)
-                assertEqualsWith(
-                    expected = result,
-                    actual = "Yes! it's Double",
-                    errMessage = "Jika argumennya adalah `1.0`, fungsi checkType() seharusnya mengembalikan pesan `Yes! it's Double`"
-                )
-            }
-
-            it("Latihan 3") {
-                val result = checkType(listOf<String>())
-                assertEqualsWith(
-                    expected = result,
-                    actual = "Yes! it's List",
-                    errMessage = "Jika argumennya adalah `listOf<String>()`, fungsi checkType() seharusnya mengembalikan pesan `Yes! it's List`"
-                )
-            }
-
-            it("Latihan 3") {
-                val result = checkType(mapOf<String, String>())
-                assertEqualsWith(
-                    expected = result,
-                    actual = "Yes! it's Map",
-                    errMessage = "Jika argumennya adalah `mapOf<String, String>()`, fungsi checkType() seharusnya mengembalikan pesan `Yes! it's Map`"
-                )
+                val vehicle: Map<String, String> = vehicle() as Map<String, String>
+                (vehicle["maxTank"] != null && vehicle["maxTank"] == "100Ltr").returnTrue("Nilai kembalian vehicle() seharusnya terdapat key `maxTank` dengan nilai `100Ltr`")
             }
         }
 
         describe("Pengecekkan latihan 4") {
             it("Latihan 4") {
-                val vehicle = vehicle()
-                (vehicle is Map<*, *>).returnTrue("Fungsi vehicle() seharusnya mengembalikan nilai dengan tipe data Map<>")
+                val car = Car("Honda", 2018)
+                val result = car.getCarInfo()
+                assertEqualsWith(
+                    expected = "Honda keluaran tahun 2018",
+                    actual = result,
+                    errMessage = "Object `Car` memiliki property `Honda` dan `2018`. Maka dari itu, fungsi `getCarInfo()` seharusnya mengembalikan pesan `Honda keluaran tahun 2018`"
+                )
             }
 
             it("Latihan 4") {
-                val vehicle: Map<String, String> = vehicle() as Map<String, String>
-                (vehicle["type"] != null && vehicle["type"] == "motorcycle").returnTrue("Nilai kembalian vehicle() seharusnya terdapat key `type` dengan nilai `motorcycle`")
+                val ev = ElectricCar("BYD", 2025, 60)
+                val result = ev.getCarInfo()
+                assertEqualsWith(
+                    expected = "BYD keluaran tahun 2025 dengan kapasitas baterai 60 kWh",
+                    actual = result,
+                    errMessage = "Object `ElectricCar` memiliki property `BYD`, `2025`, dan `60`. Maka dari itu, fungsi `getCarInfo()` seharusnya mengembalikan pesan `BYD keluaran tahun 2025 dengan kapasitas baterai 60 kWh`"
+                )
             }
 
             it("Latihan 4") {
-                val vehicle: Map<String, String> = vehicle() as Map<String, String>
-                (vehicle["maxSpeed"] != null && vehicle["maxSpeed"] == "230Km/s").returnTrue("Nilai kembalian vehicle() seharusnya terdapat key `maxSpeed` dengan nilai `230Km/s`")
+                val ev = ElectricCar("Test", 2020, 1)
+                val result = ev is Car
+                assertEqualsWith(
+                    expected = result,
+                    actual = true,
+                    errMessage = "Class `ElectricCar` seharusnya merupakan child class dari class `Car`"
+                )
             }
 
             it("Latihan 4") {
-                val vehicle: Map<String, String> = vehicle() as Map<String, String>
-                (vehicle["maxTank"] != null && vehicle["maxTank"] == "100Ltr").returnTrue("Nilai kembalian vehicle() seharusnya terdapat key `maxTank` dengan nilai `100Ltr`")
+                val carRef: Car = ElectricCar("Wuling", 2024, 50)
+                val result = carRef.getCarInfo()
+                assertEqualsWith(
+                    expected = "Wuling keluaran tahun 2024 dengan kapasitas baterai 50 kWh",
+                    actual = result,
+                    errMessage = "Method `getCarInfo()` seharusnya dioverride oleh Class `ElectricCar`"
+                )
             }
         }
 

@@ -1,4 +1,4 @@
-# Exam 3 - Generics
+# Exam 3 - Collections
 
 ## Ketentuan
 
@@ -15,39 +15,23 @@ Untuk mengerjakan soal latihan ini, silakan buka file `Exam3.kt`.
 
 ### TODO
 
-Lengkapi fungsi `checkType` agar dapat mengembalikan tipe nilai sesuai dengan parameter yang dilampirkan. Format
-keluaran yang diharapkan adalah sebagai berikut:
+Lengkapi inisialisasi fungsi `vehicle()` dengan tipe kembalian `Map` yang bernilai key-value berikut:
 
-```markdown
-    Yes! it's $dataType
-```
+- `key`: `type`
+- `value`: `motorcycle`
 
-Berikut adalah beberapa tipe nilai yang wajib ada.
 
-- Integer
-- String
-- Boolean
-- Double
-- List
-- Map
+- `key`: `maxSpeed`
+- `value`: `230Km/s`
 
-#### Contoh 1:
 
-- Masukan: `args` = `10`
-- Keluaran: `Yes! it's Integer`
-- Penjelasan: Tipe data dari `10` adalah `Integer`.
+- `key`: `maxTank`
+- `value`: `100Ltr`
 
-#### Contoh 2:
+#### Contoh :
 
-- Masukan: `args` = `listOf("A", "B")`
-- Keluaran: `Yes! it's List`
-- Penjelasan: Tipe data dari `listOf("A", "B")` adalah `List`.
-
-#### Contoh 3:
-
-- Masukan: `args` = `true`
-- Keluaran: `Yes! it's Boolean`
-- Penjelasan: Tipe data dari `true` adalah `Boolean`.
+- Masukan: -
+- Keluaran: `{type=motorcycle, maxSpeed=230Km/s, maxTank=100Ltr}`
 
 ## Menguji Kode
 
@@ -56,10 +40,6 @@ Untuk menguji kode, silakan jalankan fungsi `main` pada file `Exam3Main.kt`.
 Jika kode pada `Exam3.kt` sudah diperbaiki sesuai ketentuan, maka keluarannya akan seperti berikut:
 
 ```
-'Dicoding Indonesia' is String? Yes! it's String
-'True' is Boolean? Yes! it's Boolean
-'1' is Integer? Yes! it's Integer
-'10.01' is Double? Yes! it's Double
-'[10, 9, 8 , 6]' is List? Yes! it's List
-'{score=10}' is Map? Yes! it's Map
+My Map Result:
+{type=motorcycle, maxSpeed=230Km/s, maxTank=100Ltr}
 ```

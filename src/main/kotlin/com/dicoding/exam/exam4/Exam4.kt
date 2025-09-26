@@ -1,4 +1,11 @@
 package com.dicoding.exam.exam4
 
 // TODO
-fun vehicle() = Any()
+open class Car() {
+    open fun getCarInfo(): String
+}
+
+// TODO
+class ElectricCar() : Car() {
+    override fun getCarInfo(): String
+}
